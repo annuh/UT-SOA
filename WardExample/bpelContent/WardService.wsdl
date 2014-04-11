@@ -8,12 +8,17 @@
 	xmlns:tns="http://www.PAHospital.org/WardService/"
 	xmlns:lab="http://www.PAHospital.org/LabService/"
 	xmlns:pat="http://www.PAHospital.org/PatService/"
+	xmlns:rad="http://www.PAHospital.org/RadiologyService/"
+	xmlns:rcb="http://www.PAHospital.org/RadiologyCallbackService/"
 	xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
 	xmlns:nss="http://www.PAHospital.org/schema"
 	targetNamespace="http://www.PAHospital.org/WardService/">
   
 	<!-- types -->
 	<import namespace="http://www.PAHospital.org/schema" location="./Ward.xsd"/>
+	<import namespace="http://www.PAHospital.org/RadiologyService/" location="RadService.wsdl"/>
+	<import namespace="http://www.PAHospital.org/PatService/" location="PatService.wsdl"/>
+	<import namespace="http://www.PAHospital.org/RadiologyCallbackService/" location="RadService-callback.wsdl"/>
 	
 	<!-- message -->
 	<message name="AdmissionOrderMessage">
@@ -38,8 +43,14 @@
 	<plnk:partnerLinkType name="WardServiceLinkType">
 		<plnk:role name="ward" portType="tns:WardServicePT"/>
 	</plnk:partnerLinkType>
+	
 	<plnk:partnerLinkType name="PatServiceLinkType">
 		<plnk:role name="patientRecord" portType="pat:ElectronicPatientRecord"/>
+	</plnk:partnerLinkType>
+	
+	<plnk:partnerLinkType name="RadServiceLinkType">
+		<plnk:role name="radiologyDept" portType="rad:Radiology" />
+		<plnk:role name="radiologyCallBack" portType="rcb:RadiologyCallback" />
 	</plnk:partnerLinkType>
 
 	<!-- binding -->

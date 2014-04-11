@@ -213,10 +213,6 @@
     </operation>
   </binding>
 
-    <plnk:partnerLinkType name="PatServiceLinkType">
-    	<plnk:role name="patientRecord" portType="s0:ElectronicPatientRecord" />
-    </plnk:partnerLinkType>
-
   <!-- Service defines the address of Web service -->
   <service name="PatService">
     <port name="PatientRecordPort" binding="s0:PatientRecordBinding">

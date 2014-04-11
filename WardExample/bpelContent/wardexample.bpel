@@ -6,14 +6,22 @@
          xmlns:tns="http://www.PAHospital.org/WardService/"
          xmlns:bpel="http://docs.oasis-open.org/wsbpel/2.0/process/executable"
          xmlns:pat="http://www.PAHospital.org/PatService/"
+         xmlns:rad="http://www.PAHospital.org/RadiologyService/"
+         xmlns:rcb="http://www.PAHospital.org/RadiologyCallbackService/"
          >
          
     <!-- Import the client WSDLs -->
 	<bpel:import location="WardService.wsdl" namespace="http://www.PAHospital.org/WardService/" 
 	        importType="http://schemas.xmlsoap.org/wsdl/" />
+	<bpel:import location="RadService-callback.wsdl" namespace="http://www.PAHospital.org/RadiologyCallbackService/"
+			importType="http://schemas.xmlsoap.org/wsdl/" />
 
 	<!-- Import the server WSDLs -->
 	<bpel:import location="PatService.wsdl" namespace="http://www.PAHospital.org/PatService/"
+			importType="http://schemas.xmlsoap.org/wsdl/" />
+	<bpel:import location="RadService.wsdl" namespace="http://www.PAHospital.org/RadiologyService/"
+			importType="http://schemas.xmlsoap.org/wsdl/" />
+	<bpel:import location="RadService-callback.wsdl" namespace="http://www.PAHospital.org/RadiologyCallbackService/"
 			importType="http://schemas.xmlsoap.org/wsdl/" />
 	
 	<!-- <bpel:correlationSets>
@@ -29,8 +37,10 @@
     <bpel:partnerLinks>
     	<bpel:partnerLink name="ward" partnerLinkType="tns:WardServiceLinkType"
     		myRole="ward" />
-    	<bpel:partnerLink name="patientRecord" partnerLinkType="pat:PatServiceLinkType"
+    	<bpel:partnerLink name="patientRecord" partnerLinkType="tns:PatServiceLinkType"
     		partnerRole="patientRecord" />
+    	<bpel:partnerLink name="radiologyDept" partnerLinkType="tns:RadServiceLinkType"
+    		partnerRole="radiologyDept" myRole="radiologyCallBack" />
     </bpel:partnerLinks>
     
     <bpel:variables>
