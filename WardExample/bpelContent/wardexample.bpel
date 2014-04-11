@@ -40,7 +40,7 @@
     	<bpel:partnerLink name="patientRecord" partnerLinkType="tns:PatServiceLinkType"
     		partnerRole="patientRecord" />
     	<bpel:partnerLink name="radiologyDept" partnerLinkType="tns:RadServiceLinkType"
-    		partnerRole="radiologyDept" myRole="radiologyCallBack" />
+    		partnerRole="radiologyDept" myRole="radiologyCallBack"  />
     </bpel:partnerLinks>
     
     <bpel:variables>
