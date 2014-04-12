@@ -7,10 +7,6 @@
 			<xs:sequence>
 				<xs:element name="PatientID" type="xsd:string"/>
 				<xs:element name="PatientName" type="xsd:string"/>
-				<xs:element name="PatientStreet" type="xsd:string"/>
-				<xs:element name="PatientZipCode" type="xsd:int"/>
-				<xs:element name="PatientCity" type="xsd:string"/>
-				<xs:element name="PatientBirthday" type="xsd:date"/>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>

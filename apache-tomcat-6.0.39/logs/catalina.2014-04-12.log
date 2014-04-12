@@ -949,3 +949,37 @@ apr 12, 2014 11:10:54 AM org.apache.jk.server.JkMain start
 INFO: Jk running ID=0 time=0/117  config=null
 apr 12, 2014 11:10:54 AM org.apache.catalina.startup.Catalina start
 INFO: Server startup in 18941 ms
+Apr 12, 2014 11:19:54 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\PROGRA~1\Java\jdk1.7.0_17\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\AMD APP\bin\x86_64;C:\Program Files (x86)\AMD APP\bin\x86;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\Livestreamer;C:\Program Files\MiKTeX 2.9\miktex\bin\x64\;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\StarCraft II\Support;C:\PROGRA~1\Java\jdk1.7.0_17\bin;C:\Ruby200-x64\bin;C:\cygwin64\bin;C:\Program Files (x86)\Common Files\Shoes;.
+Apr 12, 2014 11:19:54 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8081
+Apr 12, 2014 11:19:54 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 365 ms
+Apr 12, 2014 11:19:54 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+Apr 12, 2014 11:19:54 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+Apr 12, 2014 11:19:54 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+Apr 12, 2014 11:19:54 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+Apr 12, 2014 11:19:54 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+Apr 12, 2014 11:19:56 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive ode.war
+Apr 12, 2014 11:20:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory BookFlightService
+Apr 12, 2014 11:20:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+Apr 12, 2014 11:20:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+Apr 12, 2014 11:20:01 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+Apr 12, 2014 11:20:01 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8081
+Apr 12, 2014 11:20:01 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8109
+Apr 12, 2014 11:20:01 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/14  config=null
+Apr 12, 2014 11:20:01 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 7167 ms

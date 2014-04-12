@@ -1,2 +1,4 @@
 2014-04-11 18:12:16,062 [main] INFO  org.eclipse.jetty.server.Server - jetty-8.1.14.v20131031
 2014-04-11 18:12:16,098 [main] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:55242
+2014-04-12 11:21:37,516 [main] INFO  org.eclipse.jetty.server.Server - jetty-8.1.14.v20131031
+2014-04-12 11:21:37,575 [main] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:50950
