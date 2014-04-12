@@ -1820,3 +1820,6 @@ apr 12, 2014 9:59:02 AM org.apache.jk.server.JkMain start
 INFO: Jk running ID=0 time=0/59  config=null
 apr 12, 2014 9:59:02 AM org.apache.catalina.startup.Catalina start
 INFO: Server startup in 19393 ms
+[INFO] Deploying Web service: PatService.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/PatService.aar
+[INFO] Deploying Web service: RadiologyCallbackService.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/RadiologyCallbackService.aar
+[INFO] Deploying Web service: RadiologyService.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/RadiologyService.aar
