@@ -257,3 +257,6 @@ java.lang.NullPointerException: null
 	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608) [org.eclipse.jetty.util_8.1.14.v20131031.jar:8.1.14.v20131031]
 	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543) [org.eclipse.jetty.util_8.1.14.v20131031.jar:8.1.14.v20131031]
 	at java.lang.Thread.run(Unknown Source) [na:1.7.0_17]
+2014-04-12 21:56:27,731 [main] INFO  o.e.j.server.handler.ContextHandler - stopped o.e.j.s.ServletContextHandler{/wse,null}
+2014-04-12 22:35:08,018 [main] INFO  org.eclipse.jetty.server.Server - jetty-8.1.14.v20131031
+2014-04-12 22:35:08,058 [main] INFO  o.e.jetty.server.AbstractConnector - Started SelectChannelConnector@0.0.0.0:65152
