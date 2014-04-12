@@ -1,0 +1,1822 @@
+feb 17, 2014 9:20:26 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+feb 17, 2014 9:20:29 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+feb 17, 2014 9:20:29 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3832 ms
+feb 17, 2014 9:20:29 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+feb 17, 2014 9:20:29 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+feb 17, 2014 9:20:29 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+feb 17, 2014 9:20:38 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+feb 17, 2014 9:20:39 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+feb 17, 2014 9:20:39 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory host-manager
+feb 17, 2014 9:20:39 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory manager
+feb 17, 2014 9:20:39 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+feb 17, 2014 9:20:39 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+feb 17, 2014 9:20:39 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+feb 17, 2014 9:20:39 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/80  config=null
+feb 17, 2014 9:20:39 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 10204 ms
+feb 17, 2014 9:48:58 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+feb 17, 2014 9:49:00 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+feb 17, 2014 9:49:00 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@3a71309f]) and a value of type [long[]] (value [[J@5d2f34b2]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+feb 17, 2014 9:49:00 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@3a71309f]) and a value of type [long[]] (value [[J@462cc1e9]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+feb 17, 2014 9:49:00 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@3a71309f]) and a value of type [long[]] (value [[J@246ecbfd]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+feb 17, 2014 9:49:01 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+feb 18, 2014 8:13:01 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+feb 18, 2014 8:13:03 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+feb 18, 2014 8:13:03 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3108 ms
+feb 18, 2014 8:13:03 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+feb 18, 2014 8:13:03 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+feb 18, 2014 8:13:03 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+feb 18, 2014 8:13:04 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+feb 18, 2014 8:13:04 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+feb 18, 2014 8:13:08 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+feb 18, 2014 8:13:08 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+feb 18, 2014 8:13:09 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+feb 18, 2014 8:13:09 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+feb 18, 2014 8:13:09 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+feb 18, 2014 8:13:09 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/21  config=null
+feb 18, 2014 8:13:09 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 5692 ms
+feb 18, 2014 9:38:13 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+feb 18, 2014 9:38:15 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+feb 18, 2014 9:38:15 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@97e2437]) and a value of type [long[]] (value [[J@387b9bbf]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+feb 18, 2014 9:38:16 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+feb 18, 2014 10:48:21 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+feb 18, 2014 10:48:22 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+feb 18, 2014 10:48:22 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2341 ms
+feb 18, 2014 10:48:23 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+feb 18, 2014 10:48:23 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+feb 18, 2014 10:48:23 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+feb 18, 2014 10:48:23 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+feb 18, 2014 10:48:23 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+feb 18, 2014 10:48:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+feb 18, 2014 10:48:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+feb 18, 2014 10:48:27 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+feb 18, 2014 10:48:27 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+feb 18, 2014 10:48:27 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+feb 18, 2014 10:48:27 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/17  config=null
+feb 18, 2014 10:48:27 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 4807 ms
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.RepositoryListener.startListener(RepositoryListener.java:371)
+	at org.apache.axis2.deployment.scheduler.SchedulerTask.checkRepository(SchedulerTask.java:73)
+	at org.apache.axis2.deployment.scheduler.SchedulerTask.run(SchedulerTask.java:94)
+	at org.apache.axis2.deployment.scheduler.Scheduler$SchedulerTimerTask.run(Scheduler.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 12 more
+[ERROR] The BookPriceService-test-client.jar service, which is not valid, caused The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.RepositoryListener.startListener(RepositoryListener.java:371)
+	at org.apache.axis2.deployment.scheduler.SchedulerTask.checkRepository(SchedulerTask.java:73)
+	at org.apache.axis2.deployment.scheduler.SchedulerTask.run(SchedulerTask.java:94)
+	at org.apache.axis2.deployment.scheduler.Scheduler$SchedulerTimerTask.run(Scheduler.java:93)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 12 more
+[INFO] org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+feb 18, 2014 10:55:05 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+feb 18, 2014 10:55:06 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+feb 18, 2014 10:55:07 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/axis2] appears to have started a thread named [File Reaper] but has failed to stop it. This is very likely to create a memory leak.
+feb 18, 2014 10:55:07 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@3af6513c]) and a value of type [long[]] (value [[J@14f5862]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+feb 18, 2014 10:55:07 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+feb 18, 2014 11:06:10 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+feb 18, 2014 11:06:11 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+feb 18, 2014 11:06:11 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 722 ms
+feb 18, 2014 11:06:11 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+feb 18, 2014 11:06:11 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+feb 18, 2014 11:06:11 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+feb 18, 2014 11:06:11 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+feb 18, 2014 11:06:11 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[ERROR] The BookPriceService-test-client.jar service, which is not valid, caused The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[INFO] org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+feb 18, 2014 11:06:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+feb 18, 2014 11:06:12 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+feb 18, 2014 11:06:13 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+feb 18, 2014 11:06:13 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+feb 18, 2014 11:06:13 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+feb 18, 2014 11:06:13 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/21  config=null
+feb 18, 2014 11:06:13 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 1989 ms
+[INFO] Deploying Web service: BookPriceService.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService.aar
+[ERROR] The endpoint reference (EPR) for the Operation not found is /axis2/services/BookPriceService and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+org.apache.axis2.AxisFault: The endpoint reference (EPR) for the Operation not found is /axis2/services/BookPriceService and the WSA Action = null. If this EPR was previously reachable, please contact the server administrator.
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:102)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:262)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:168)
+	at org.apache.axis2.transport.http.util.RESTUtil.invokeAxisEngine(RESTUtil.java:144)
+	at org.apache.axis2.transport.http.util.RESTUtil.processURLRequest(RESTUtil.java:139)
+	at org.apache.axis2.transport.http.AxisServlet$RestRequestProcessor.processURLRequest(AxisServlet.java:837)
+	at org.apache.axis2.transport.http.AxisServlet.doGet(AxisServlet.java:273)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:606)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:744)
+[WARN] Deprecated usage of OMElement#declareNamespace(String,String) with empty prefix
+[ERROR] The service cannot be found for the endpoint reference (EPR) /axis2/services/getBookPrice
+org.apache.axis2.AxisFault: The service cannot be found for the endpoint reference (EPR) /axis2/services/getBookPrice
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:78)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:262)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:168)
+	at org.apache.axis2.transport.http.util.RESTUtil.invokeAxisEngine(RESTUtil.java:144)
+	at org.apache.axis2.transport.http.util.RESTUtil.processURLRequest(RESTUtil.java:139)
+	at org.apache.axis2.transport.http.AxisServlet$RestRequestProcessor.processURLRequest(AxisServlet.java:837)
+	at org.apache.axis2.transport.http.AxisServlet.doGet(AxisServlet.java:273)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:606)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:744)
+[WARN] Deprecated usage of OMElement#declareNamespace(String,String) with empty prefix
+[ERROR] The service cannot be found for the endpoint reference (EPR) /axis2/services/bookPriceService
+org.apache.axis2.AxisFault: The service cannot be found for the endpoint reference (EPR) /axis2/services/bookPriceService
+	at org.apache.axis2.engine.DispatchPhase.checkPostConditions(DispatchPhase.java:78)
+	at org.apache.axis2.engine.Phase.invoke(Phase.java:329)
+	at org.apache.axis2.engine.AxisEngine.invoke(AxisEngine.java:262)
+	at org.apache.axis2.engine.AxisEngine.receive(AxisEngine.java:168)
+	at org.apache.axis2.transport.http.util.RESTUtil.invokeAxisEngine(RESTUtil.java:144)
+	at org.apache.axis2.transport.http.util.RESTUtil.processURLRequest(RESTUtil.java:139)
+	at org.apache.axis2.transport.http.AxisServlet$RestRequestProcessor.processURLRequest(AxisServlet.java:837)
+	at org.apache.axis2.transport.http.AxisServlet.doGet(AxisServlet.java:273)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:617)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:723)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:290)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:206)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:233)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:191)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:127)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:103)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:109)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:293)
+	at org.apache.coyote.http11.Http11Processor.process(Http11Processor.java:861)
+	at org.apache.coyote.http11.Http11Protocol$Http11ConnectionHandler.process(Http11Protocol.java:606)
+	at org.apache.tomcat.util.net.JIoEndpoint$Worker.run(JIoEndpoint.java:489)
+	at java.lang.Thread.run(Thread.java:744)
+[WARN] Deprecated usage of OMElement#declareNamespace(String,String) with empty prefix
+mrt 07, 2014 3:18:11 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+mrt 07, 2014 3:18:13 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+mrt 07, 2014 3:18:13 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3408 ms
+mrt 07, 2014 3:18:13 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+mrt 07, 2014 3:18:13 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+mrt 07, 2014 3:18:13 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+mrt 07, 2014 3:18:14 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+mrt 07, 2014 3:18:14 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[ERROR] The BookPriceService-test-client.jar service, which is not valid, caused The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[INFO] org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+[INFO] Deploying Web service: BookPriceService.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService.aar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+mrt 07, 2014 3:18:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+mrt 07, 2014 3:18:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+mrt 07, 2014 3:18:19 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+mrt 07, 2014 3:18:19 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+mrt 07, 2014 3:18:19 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+mrt 07, 2014 3:18:19 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/18  config=null
+mrt 07, 2014 3:18:19 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 6142 ms
+[INFO] Deploying Web service: BookFlightService.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookFlightService.aar
+mrt 07, 2014 3:24:39 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory BookFlightService
+mrt 07, 2014 6:49:45 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+mrt 07, 2014 6:49:46 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+mrt 07, 2014 6:49:46 PM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/axis2] appears to have started a thread named [File Reaper] but has failed to stop it. This is very likely to create a memory leak.
+mrt 07, 2014 6:49:46 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@701c2917]) and a value of type [long[]] (value [[J@48cdde81]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 07, 2014 6:49:47 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+mrt 07, 2014 8:46:44 PM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+mrt 07, 2014 8:46:47 PM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+mrt 07, 2014 8:46:47 PM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3021 ms
+mrt 07, 2014 8:46:47 PM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+mrt 07, 2014 8:46:47 PM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+mrt 07, 2014 8:46:47 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+mrt 07, 2014 8:46:48 PM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+mrt 07, 2014 8:46:48 PM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+[INFO] Deploying Web service: BookFlightService.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookFlightService.aar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[ERROR] The BookPriceService-test-client.jar service, which is not valid, caused The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[INFO] org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+[INFO] Deploying Web service: BookPriceService.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService.aar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+mrt 07, 2014 8:46:53 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory BookFlightService
+mrt 07, 2014 8:46:53 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+mrt 07, 2014 8:46:53 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+mrt 07, 2014 8:46:53 PM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+mrt 07, 2014 8:46:53 PM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+mrt 07, 2014 8:46:53 PM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+mrt 07, 2014 8:46:53 PM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/34  config=null
+mrt 07, 2014 8:46:53 PM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 6501 ms
+mrt 07, 2014 10:09:42 PM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+mrt 07, 2014 10:09:43 PM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+mrt 07, 2014 10:09:44 PM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@6f43707d]) and a value of type [long[]] (value [[J@348e579c]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 07, 2014 10:09:45 PM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+mrt 18, 2014 8:51:18 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+mrt 18, 2014 8:51:20 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+mrt 18, 2014 8:51:20 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3297 ms
+mrt 18, 2014 8:51:20 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+mrt 18, 2014 8:51:20 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+mrt 18, 2014 8:51:20 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+mrt 18, 2014 8:51:21 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+mrt 18, 2014 8:51:21 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+[INFO] Deploying Web service: BookFlightService.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookFlightService.aar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[ERROR] The BookPriceService-test-client.jar service, which is not valid, caused The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[INFO] org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+[INFO] Deploying Web service: BookPriceService.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService.aar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+mrt 18, 2014 8:51:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory BookFlightService
+mrt 18, 2014 8:51:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+mrt 18, 2014 8:51:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+mrt 18, 2014 8:51:31 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+mrt 18, 2014 8:51:31 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+mrt 18, 2014 8:51:31 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+mrt 18, 2014 8:51:31 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/39  config=null
+mrt 18, 2014 8:51:31 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 11041 ms
+mrt 18, 2014 8:52:51 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive ode.war
+08:52:56,807 WARN  [AxisServlet] No transportReceiver for org.apache.axis2.transport.http.AxisServletListener found. An instance for HTTP will be configured automatically. Please update your axis2.xml file!
+08:52:57,943 INFO  [ODEServer] Using DAO Connection Factory class org.apache.ode.dao.jpa.BPELDAOConnectionFactoryImpl.
+08:53:01,829 INFO  [BpelServerImpl] BPEL Server Started.
+08:53:01,834 INFO  [SystemSchedulesConfig] SYSTEM CRON configuration: /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/ode/WEB-INF/conf/schedules.xml
+08:53:03,698 INFO  [DeploymentPoller] Poller started.
+08:53:03,698 INFO  [ODEServer] Process deployment polling started on path /Users/Anne/Documents/Studie/apache-tomcat-6.0.39/webapps/ode/WEB-INF/processes.
+08:53:03,698 INFO  [ODEServer] ODE Service Engine has been started.
+mrt 18, 2014 11:01:15 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+mrt 18, 2014 11:01:17 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+11:01:18,449 INFO  [BpelServerImpl] BPEL Server Stopped.
+11:01:20,531 INFO  [ODEServer] Shutdown completed. 
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/ode] registered the JDBC driver [org.apache.derby.jdbc.AutoloadedDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/ode] appears to have started a thread named [Timer-3] but has failed to stop it. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache$1] (value [org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache$1@14698401]) and a value of type [java.util.ArrayList] (value [[java.lang.ref.SoftReference@1b59681f]]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.xmlbeans.XmlBeans$1] (value [org.apache.xmlbeans.XmlBeans$1@ac2d940]) and a value of type [java.lang.ref.SoftReference] (value [java.lang.ref.SoftReference@7e44fe44]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@6391631f]) and a value of type [org.apache.derby.iapi.services.context.ContextManager] (value [org.apache.derby.iapi.services.context.ContextManager@21c62f89]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache$1] (value [org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache$1@14698401]) and a value of type [java.util.ArrayList] (value [[java.lang.ref.SoftReference@5e02bb4a]]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.xmlbeans.XmlBeans$1] (value [org.apache.xmlbeans.XmlBeans$1@ac2d940]) and a value of type [java.lang.ref.SoftReference] (value [java.lang.ref.SoftReference@556277e]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:30 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@4adda2e2]) and a value of type [long[]] (value [[J@1cf0c9d4]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:30 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+apr 12, 2014 9:34:41 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:34:42 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:34:42 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:34:42 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:34:42 AM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+apr 12, 2014 9:42:02 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:42:03 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:42:03 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:42:03 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:42:03 AM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+apr 12, 2014 9:44:31 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:44:31 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:44:31 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:44:31 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:44:31 AM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+apr 12, 2014 9:44:34 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:44:34 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:44:34 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:44:34 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:44:34 AM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+apr 12, 2014 9:44:34 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:44:34 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:44:34 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:44:34 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:44:34 AM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+apr 12, 2014 9:45:03 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:45:03 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:45:03 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:45:03 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:45:03 AM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+apr 12, 2014 9:45:57 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:45:57 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:45:57 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:45:57 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:45:57 AM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+apr 12, 2014 9:46:00 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:46:00 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:562)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.load(Bootstrap.java:261)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:413)
+
+apr 12, 2014 9:46:00 AM org.apache.tomcat.util.digester.Digester fatalError
+SEVERE: Parse Fatal Error at line 69 column 38: Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.createSAXParseException(ErrorHandlerWrapper.java:198)
+	at com.sun.org.apache.xerces.internal.util.ErrorHandlerWrapper.fatalError(ErrorHandlerWrapper.java:177)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:441)
+	at com.sun.org.apache.xerces.internal.impl.XMLErrorReporter.reportError(XMLErrorReporter.java:368)
+	at com.sun.org.apache.xerces.internal.impl.XMLScanner.reportFatalError(XMLScanner.java:1436)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.seekCloseOfStartTag(XMLDocumentFragmentScannerImpl.java:1394)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanStartElement(XMLDocumentFragmentScannerImpl.java:1327)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl$FragmentContentDriver.next(XMLDocumentFragmentScannerImpl.java:2770)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentScannerImpl.next(XMLDocumentScannerImpl.java:606)
+	at com.sun.org.apache.xerces.internal.impl.XMLDocumentFragmentScannerImpl.scanDocument(XMLDocumentFragmentScannerImpl.java:510)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:848)
+	at com.sun.org.apache.xerces.internal.parsers.XML11Configuration.parse(XML11Configuration.java:777)
+	at com.sun.org.apache.xerces.internal.parsers.XMLParser.parse(XMLParser.java:141)
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1213)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:46:00 AM org.apache.catalina.startup.Catalina load
+WARNING: Catalina.start using conf/server.xml: 
+org.xml.sax.SAXParseException; systemId: file:///Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/conf/server.xml; lineNumber: 69; columnNumber: 38; Element type "Connector" must be followed by either attribute specifications, ">" or "/>".
+	at com.sun.org.apache.xerces.internal.parsers.AbstractSAXParser.parse(AbstractSAXParser.java:1239)
+	at com.sun.org.apache.xerces.internal.jaxp.SAXParserImpl$JAXPSAXParser.parse(SAXParserImpl.java:649)
+	at org.apache.tomcat.util.digester.Digester.parse(Digester.java:1675)
+	at org.apache.catalina.startup.Catalina.load(Catalina.java:524)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:582)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+
+apr 12, 2014 9:46:00 AM org.apache.catalina.startup.Catalina start
+SEVERE: Cannot start server. Server instance is not configured.
+apr 12, 2014 9:51:55 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+apr 12, 2014 9:51:58 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+apr 12, 2014 9:51:58 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3950 ms
+apr 12, 2014 9:51:58 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+apr 12, 2014 9:51:58 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+apr 12, 2014 9:51:59 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+apr 12, 2014 9:51:59 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+apr 12, 2014 9:52:00 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+[INFO] Deploying Web service: BookFlightService.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookFlightService.aar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[ERROR] The BookPriceService-test-client.jar service, which is not valid, caused The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[INFO] org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+[INFO] Deploying Web service: BookPriceService.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService.aar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+apr 12, 2014 9:52:03 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive ode.war
+09:52:05,971 WARN  [AxisServlet] No transportReceiver for org.apache.axis2.transport.http.AxisServletListener found. An instance for HTTP will be configured automatically. Please update your axis2.xml file!
+09:52:06,768 INFO  [ODEServer] Using DAO Connection Factory class org.apache.ode.dao.jpa.BPELDAOConnectionFactoryImpl.
+09:52:18,461 INFO  [BpelServerImpl] Registered process {http://www.PAHospital.org/WardService/}wardexample-10.
+09:52:18,513 INFO  [BpelServerImpl] BPEL Server Started.
+09:52:18,554 INFO  [SystemSchedulesConfig] SYSTEM CRON configuration: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/ode/WEB-INF/conf/schedules.xml
+09:52:19,633 INFO  [DeploymentPoller] Poller started.
+09:52:19,633 INFO  [ODEServer] Process deployment polling started on path /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/ode/WEB-INF/processes.
+09:52:19,633 INFO  [ODEServer] ODE Service Engine has been started.
+apr 12, 2014 9:52:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory BookFlightService
+apr 12, 2014 9:52:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+apr 12, 2014 9:52:19 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+apr 12, 2014 9:52:20 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+apr 12, 2014 9:52:20 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+apr 12, 2014 9:52:20 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+apr 12, 2014 9:52:20 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/131  config=null
+apr 12, 2014 9:52:20 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 21686 ms
+apr 12, 2014 9:58:32 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+apr 12, 2014 9:58:33 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+09:58:34,117 INFO  [BpelServerImpl] BPEL Server Stopped.
+09:58:34,275 INFO  [ODEServer] Shutdown completed. 
+apr 12, 2014 9:58:34 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/ode] registered the JDBC driver [org.apache.derby.jdbc.AutoloadedDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+apr 12, 2014 9:58:34 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/ode] appears to have started a thread named [Timer-3] but has failed to stop it. This is very likely to create a memory leak.
+apr 12, 2014 9:58:34 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@7c4ed0bc]) and a value of type [org.apache.xerces.jaxp.DocumentBuilderImpl] (value [org.apache.xerces.jaxp.DocumentBuilderImpl@1a6a2666]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+apr 12, 2014 9:58:34 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.derby.iapi.sql.dictionary.TableDescriptor$1] (value [org.apache.derby.iapi.sql.dictionary.TableDescriptor$1@2eff0016]) and a value of type [java.util.WeakHashMap] (value [{={3}, ={1}, ={3}}]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+apr 12, 2014 9:58:36 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@7447c97e]) and a value of type [long[]] (value [[J@14fdaad6]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+apr 12, 2014 9:58:37 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
+apr 12, 2014 9:58:40 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+apr 12, 2014 9:58:43 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8081
+apr 12, 2014 9:58:43 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 2987 ms
+apr 12, 2014 9:58:43 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+apr 12, 2014 9:58:43 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+apr 12, 2014 9:58:43 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+apr 12, 2014 9:58:44 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+apr 12, 2014 9:58:44 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+[INFO] Clustering has been disabled
+[INFO] Deploying module: addressing-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/addressing-1.6.2.mar
+[INFO] Deploying module: jaxws-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/axis2-jaxws-mar-1.6.2.mar
+[INFO] Deploying module: metadataExchange-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mex-1.6.2.mar
+[INFO] Deploying module: mtompolicy-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/mtompolicy-1.6.2.mar
+[INFO] Deploying module: ping-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/ping-1.6.2.mar
+[INFO] Deploying module: script-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/scripting-1.6.2.mar
+[INFO] Deploying module: soapmonitor-1.6.2 - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/modules/soapmonitor-1.6.2.mar
+[INFO] Deploying Web service: BookFlightService.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookFlightService.aar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[ERROR] The BookPriceService-test-client.jar service, which is not valid, caused The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:150)
+	at org.apache.axis2.deployment.ServiceDeployer.deploy(ServiceDeployer.java:82)
+	at org.apache.axis2.deployment.repository.util.DeploymentFileData.deploy(DeploymentFileData.java:136)
+	at org.apache.axis2.deployment.DeploymentEngine.doDeploy(DeploymentEngine.java:813)
+	at org.apache.axis2.deployment.repository.util.WSInfoList.update(WSInfoList.java:144)
+	at org.apache.axis2.deployment.RepositoryListener.update(RepositoryListener.java:377)
+	at org.apache.axis2.deployment.RepositoryListener.checkServices(RepositoryListener.java:254)
+	at org.apache.axis2.deployment.DeploymentEngine.loadServices(DeploymentEngine.java:142)
+	at org.apache.axis2.deployment.WarBasedAxisConfigurator.loadServices(WarBasedAxisConfigurator.java:283)
+	at org.apache.axis2.context.ConfigurationContextFactory.createConfigurationContext(ConfigurationContextFactory.java:95)
+	at org.apache.axis2.transport.http.AxisServlet.initConfigContext(AxisServlet.java:584)
+	at org.apache.axis2.transport.http.AxisServlet.init(AxisServlet.java:454)
+	at org.apache.catalina.core.StandardWrapper.loadServlet(StandardWrapper.java:1213)
+	at org.apache.catalina.core.StandardWrapper.load(StandardWrapper.java:1026)
+	at org.apache.catalina.core.StandardContext.loadOnStartup(StandardContext.java:4425)
+	at org.apache.catalina.core.StandardContext.start(StandardContext.java:4738)
+	at org.apache.catalina.core.ContainerBase.addChildInternal(ContainerBase.java:799)
+	at org.apache.catalina.core.ContainerBase.addChild(ContainerBase.java:779)
+	at org.apache.catalina.core.StandardHost.addChild(StandardHost.java:583)
+	at org.apache.catalina.startup.HostConfig.deployWAR(HostConfig.java:943)
+	at org.apache.catalina.startup.HostConfig.deployWARs(HostConfig.java:778)
+	at org.apache.catalina.startup.HostConfig.deployApps(HostConfig.java:504)
+	at org.apache.catalina.startup.HostConfig.start(HostConfig.java:1317)
+	at org.apache.catalina.startup.HostConfig.lifecycleEvent(HostConfig.java:324)
+	at org.apache.catalina.util.LifecycleSupport.fireLifecycleEvent(LifecycleSupport.java:142)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1065)
+	at org.apache.catalina.core.StandardHost.start(StandardHost.java:822)
+	at org.apache.catalina.core.ContainerBase.start(ContainerBase.java:1057)
+	at org.apache.catalina.core.StandardEngine.start(StandardEngine.java:463)
+	at org.apache.catalina.core.StandardService.start(StandardService.java:525)
+	at org.apache.catalina.core.StandardServer.start(StandardServer.java:754)
+	at org.apache.catalina.startup.Catalina.start(Catalina.java:595)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.catalina.startup.Bootstrap.start(Bootstrap.java:289)
+	at org.apache.catalina.startup.Bootstrap.main(Bootstrap.java:414)
+Caused by: org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+	at org.apache.axis2.deployment.repository.util.ArchiveReader.processServiceGroup(ArchiveReader.java:147)
+	... 37 more
+[INFO] org.apache.axis2.deployment.DeploymentException: The services.xml file cannot be found for the service: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService-test-client.jar
+[INFO] Deploying Web service: BookPriceService.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/BookPriceService.aar
+[INFO] Deploying Web service: version-1.6.2.aar - file:/Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/axis2/WEB-INF/services/version-1.6.2.aar
+apr 12, 2014 9:58:50 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive ode.war
+09:58:53,824 WARN  [AxisServlet] No transportReceiver for org.apache.axis2.transport.http.AxisServletListener found. An instance for HTTP will be configured automatically. Please update your axis2.xml file!
+09:58:54,656 INFO  [ODEServer] Using DAO Connection Factory class org.apache.ode.dao.jpa.BPELDAOConnectionFactoryImpl.
+09:59:01,126 INFO  [BpelServerImpl] Registered process {http://www.PAHospital.org/WardService/}wardexample-10.
+09:59:01,224 INFO  [BpelServerImpl] BPEL Server Started.
+09:59:01,227 INFO  [SystemSchedulesConfig] SYSTEM CRON configuration: /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/ode/WEB-INF/conf/schedules.xml
+09:59:02,034 INFO  [DeploymentPoller] Poller started.
+09:59:02,034 INFO  [ODEServer] Process deployment polling started on path /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/ode/WEB-INF/processes.
+09:59:02,034 INFO  [ODEServer] ODE Service Engine has been started.
+apr 12, 2014 9:59:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory BookFlightService
+apr 12, 2014 9:59:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+apr 12, 2014 9:59:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+apr 12, 2014 9:59:02 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+apr 12, 2014 9:59:02 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8081
+apr 12, 2014 9:59:02 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+apr 12, 2014 9:59:02 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/59  config=null
+apr 12, 2014 9:59:02 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 19393 ms

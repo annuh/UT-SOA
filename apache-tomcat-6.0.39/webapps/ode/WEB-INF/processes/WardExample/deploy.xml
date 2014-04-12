@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<deploy xmlns="http://www.apache.org/ode/schemas/dd/2007/03" xmlns:PatService="http://www.PAHospital.org/PatService/" xmlns:RadiologyCallbackService="http://www.PAHospital.org/RadiologyCallbackService/" xmlns:RadiologyService="http://www.PAHospital.org/RadiologyService/" xmlns:WardService="http://www.PAHospital.org/WardService/">
+  <process name="WardService:wardexample">
+    <active>true</active>
+    <retired>false</retired>
+    <process-events generate="all"/>
+    <provide partnerLink="ward">
+      <service name="WardService:WardService" port="WardServicePT"/>
+    </provide>
+    <provide partnerLink="radiologyDept">
+      <service name="RadiologyCallbackService:RadiologyCallbackService" port="RadiologyCallbackPort"/>
+    </provide>
+    <invoke partnerLink="patientRecord">
+      <service name="PatService:PatService" port="PatientRecordPort"/>
+    </invoke>
+    <invoke partnerLink="radiologyDept">
+      <service name="RadiologyService:RadiologyService" port="RadiologyPort"/>
+    </invoke>
+  </process>
+</deploy>

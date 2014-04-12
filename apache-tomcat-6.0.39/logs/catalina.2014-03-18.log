@@ -1,0 +1,56 @@
+mrt 18, 2014 8:51:18 AM org.apache.catalina.core.AprLifecycleListener init
+INFO: The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: /Users/Anne/Library/Java/Extensions:/Library/Java/Extensions:/Network/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java:.
+mrt 18, 2014 8:51:20 AM org.apache.coyote.http11.Http11Protocol init
+INFO: Initializing Coyote HTTP/1.1 on http-8080
+mrt 18, 2014 8:51:20 AM org.apache.catalina.startup.Catalina load
+INFO: Initialization processed in 3297 ms
+mrt 18, 2014 8:51:20 AM org.apache.catalina.core.StandardService start
+INFO: Starting service Catalina
+mrt 18, 2014 8:51:20 AM org.apache.catalina.core.StandardEngine start
+INFO: Starting Servlet Engine: Apache Tomcat/6.0.39
+mrt 18, 2014 8:51:20 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor host-manager.xml
+mrt 18, 2014 8:51:21 AM org.apache.catalina.startup.HostConfig deployDescriptor
+INFO: Deploying configuration descriptor manager.xml
+mrt 18, 2014 8:51:21 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive axis2.war
+mrt 18, 2014 8:51:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory BookFlightService
+mrt 18, 2014 8:51:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory docs
+mrt 18, 2014 8:51:30 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory examples
+mrt 18, 2014 8:51:31 AM org.apache.catalina.startup.HostConfig deployDirectory
+INFO: Deploying web application directory ROOT
+mrt 18, 2014 8:51:31 AM org.apache.coyote.http11.Http11Protocol start
+INFO: Starting Coyote HTTP/1.1 on http-8080
+mrt 18, 2014 8:51:31 AM org.apache.jk.common.ChannelSocket init
+INFO: JK: ajp13 listening on /0.0.0.0:8009
+mrt 18, 2014 8:51:31 AM org.apache.jk.server.JkMain start
+INFO: Jk running ID=0 time=0/39  config=null
+mrt 18, 2014 8:51:31 AM org.apache.catalina.startup.Catalina start
+INFO: Server startup in 11041 ms
+mrt 18, 2014 8:52:51 AM org.apache.catalina.startup.HostConfig deployWAR
+INFO: Deploying web application archive ode.war
+mrt 18, 2014 11:01:15 AM org.apache.coyote.http11.Http11Protocol pause
+INFO: Pausing Coyote HTTP/1.1 on http-8080
+mrt 18, 2014 11:01:17 AM org.apache.catalina.core.StandardService stop
+INFO: Stopping service Catalina
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader clearReferencesJdbc
+SEVERE: The web application [/ode] registered the JDBC driver [org.apache.derby.jdbc.AutoloadedDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader clearReferencesThreads
+SEVERE: The web application [/ode] appears to have started a thread named [Timer-3] but has failed to stop it. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache$1] (value [org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache$1@14698401]) and a value of type [java.util.ArrayList] (value [[java.lang.ref.SoftReference@1b59681f]]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.xmlbeans.XmlBeans$1] (value [org.apache.xmlbeans.XmlBeans$1@ac2d940]) and a value of type [java.lang.ref.SoftReference] (value [java.lang.ref.SoftReference@7e44fe44]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [java.lang.ThreadLocal] (value [java.lang.ThreadLocal@6391631f]) and a value of type [org.apache.derby.iapi.services.context.ContextManager] (value [org.apache.derby.iapi.services.context.ContextManager@21c62f89]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache$1] (value [org.apache.xmlbeans.impl.schema.SchemaTypeLoaderImpl$SchemaTypeLoaderCache$1@14698401]) and a value of type [java.util.ArrayList] (value [[java.lang.ref.SoftReference@5e02bb4a]]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:20 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/ode] created a ThreadLocal with key of type [org.apache.xmlbeans.XmlBeans$1] (value [org.apache.xmlbeans.XmlBeans$1@ac2d940]) and a value of type [java.lang.ref.SoftReference] (value [java.lang.ref.SoftReference@556277e]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:30 AM org.apache.catalina.loader.WebappClassLoader checkThreadLocalMapForLeaks
+SEVERE: The web application [/axis2] created a ThreadLocal with key of type [org.apache.axiom.util.UIDGenerator$1] (value [org.apache.axiom.util.UIDGenerator$1@4adda2e2]) and a value of type [long[]] (value [[J@1cf0c9d4]) but failed to remove it when the web application was stopped. This is very likely to create a memory leak.
+mrt 18, 2014 11:01:30 AM org.apache.coyote.http11.Http11Protocol destroy
+INFO: Stopping Coyote HTTP/1.1 on http-8080
