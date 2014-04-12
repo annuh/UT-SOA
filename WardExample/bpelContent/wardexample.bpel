@@ -46,7 +46,7 @@
     		myRole="ward" />
     	<bpel:partnerLink name="patientService" partnerLinkType="tns:PatServiceLinkType"
     		partnerRole="patientRecord" />
-    	<bpel:partnerLink name="TransportService" partnerLinkType="tns:TranspServiceLinkType"
+    	<bpel:partnerLink name="transportService" partnerLinkType="tns:TranspServiceLinkType"
     		partnerRole="transportService" />	
     	<bpel:partnerLink name="laboratoryService" partnerLinkType="tns:LabServiceLinkType"
     		partnerRole="laboratoryDept" myRole="laboratoryCallback" />
@@ -55,28 +55,35 @@
     </bpel:partnerLinks>
     
     <bpel:variables>
+    	<!-- WARD -->
     	<bpel:variable name="AdmissionForm" messageType="tns:AdmissionOrderMessage" />
     	<bpel:variable name="Response" messageType="tns:TestResponseMessage" />
     	
+    	<!-- PATIENT -->
     	<bpel:variable name="CreatePatientRecordRequest" messageType="pat:CreatePatientRecordRequest" />
     	<bpel:variable name="CreatePatientRecordResponse" messageType="pat:CreatePatientRecordResponse" />
     	
     	<bpel:variable name="GetPatientIDsRequest" messageType="pat:GetPatientIDsRequest" />
     	<bpel:variable name="GetPatientIDsResponse" messageType="pat:GetPatientIDsResponse" />
     	
+    	<bpel:variable name="StoreRadiologyReportRequest" messageType="pat:StoreRadiologyReportRequest" />
+    	<bpel:variable name="StoreLabReportRequest" messageType="pat:StoreLabReportRequest" />
+    	
+    	<!-- RADIOLOGY -->
     	<bpel:variable name="OrderRadExaminationRequest" messageType="rad:RadiologyOrderRadExaminationRequest" />
+    	<bpel:variable name="OrderRadExaminationResponse" messageType="rad:RadiologyOrderRadExaminationResponse" />
     	
+    	<bpel:variable name="RequestAppointmentRequest" messageType="rad:RadiologyRequestAppointmentRequest" />
+    	<bpel:variable name="RequestAppointmentResponse" messageType="rad:RadiologyRequestAppointmentResponse" />
+    	
+    	<bpel:variable name="MakePaymentRequest" messageType="rad:RadiologyMakePaymentRequest" />
+    	
+    	<bpel:variable name="PatientTransportOrder" messageType="tra:OrderPatientTransportRequest" />
+    	
+    	<bpel:variable name="ReportRequest" messageType="rcb:RadiologyReportRequest" />
+    	
+    	<!-- LABORATORY -->
     	<bpel:variable name="OrderLabTestRequest" messageType="lab:LaboratoryOrderLabTestRequest" />
-    	
-    	<!-- 
-    	<bpel:variable name="patient" messageType="pat:CreatePatientRecordRequest" />
-    	<bpel:variable name="createPatientResponse" messageType="pat:CreatePatientRecordResponse" />
-    	<bpel:variable name="radiologyOrder" messageType="rad:RadiologyOrderRadExaminationRequest" />
-    	<bpel:variable name="appointment" messageType="rad:RadiologyRequestAppointmentRequest" />
-    	<bpel:variable name="radiologyOrderResponse" messageType="rad:RadiologyOrderRadExaminationResponse" />
-    	<bpel:variable name="appointmentResponse" messageType="rad:RadiologyRequestAppointmentResponse" />
-    	<bpel:variable name="callBackReq" messageType="rcb:RadiologyReportRequest" />
-    	-->
     </bpel:variables>
 
 	<bpel:sequence name="main">
@@ -122,16 +129,8 @@
 		</bpel:assign>
 		
 		<bpel:invoke name="Invoke-PatientService-GetPatientIDsByName" partnerLink="patientService"
-			operation="GetPatientIDsByName" portType="pat:ElectronicPatientRecord" inputVariable="GetPatientIDsRequest"
+			portType="pat:ElectronicPatientRecord" operation="GetPatientIDsByName" inputVariable="GetPatientIDsRequest"
 			outputVariable="GetPatientIDsResponse"></bpel:invoke>
-		
-		<!-- Dit is zodat we een response krijgen voor de Ward Operation -->
-		<bpel:assign validate="no" name="ResponseTEST">
-			<bpel:copy>
-				<bpel:from><bpel:literal><tns:TesterElem>Als het goed is werkt dit</tns:TesterElem></bpel:literal></bpel:from>
-				<bpel:to>$Response.TestResponse</bpel:to>
-			</bpel:copy>
-		</bpel:assign>
 		
 		<!-- Hier is een IF-Condition in het geval dat de patient nog niet bestaat in de database wordt die aangemaakt -->
 		<bpel:if name="new-patient">
@@ -139,7 +138,7 @@
 			
 			<!-- Patient bestaat nog niet maak een nieuwe aan -->
 			<bpel:invoke name="Invoke-PatientService-CreatePatientRecord" partnerLink="patientService"
-				operation="CreatePatientRecord" portType="pat:ElectronicPatientRecord" inputVariable="CreatePatientRecordRequest"
+				portType="pat:ElectronicPatientRecord" operation="CreatePatientRecord" inputVariable="CreatePatientRecordRequest"
 				outputVariable="CreatePatientRecordResponse"></bpel:invoke>
 				
 		</bpel:if>
@@ -185,13 +184,183 @@
 				<bpel:to>$OrderLabTestRequest.LabOrder/PatientID</bpel:to>
 			</bpel:copy>
 		</bpel:assign>
+	
+		<!-- To zo ver het aanmaken van de patient en het initializeren van variabelen -->
 		
+		<!-- Er zijn in de flow 4 sequences en 3 links	  					-->
+		<!-- De 4 sequences zijn als volgt:				  					-->
+		<!-- RadiologySequence:  Een radiology exam etc aanvragen 			-->
+		<!-- LaboratorySequence: Een laboratory report etc aanvragen		-->
+		<!-- PaymentSequence:	 De payment voor de radiology exam maken	-->
+		<!-- ReviewSequence:	 De exam en report checken + discharge		-->
+		<!-- De links zijn: RadLink, LabLink, PayLink						-->
+		<!-- RadLink: source = RadiologySequence, target = ReviewSequence	-->
+		<!-- LabLink: source = LaboratorySequence, target = ReviewSequence  -->
+		<!-- PayLink: source = RadiologySequence, target = PaymentSequence  -->
+		
+		<!-- <bpel:flow name="parallel-compisition">  -->
+			<!-- <bpel:links>
+				<bpel:link name="RadLink" />
+				<bpel:link name="LabLink" />
+				<bpel:link name="PayLink" />
+			</bpel:links> -->
+			
+			<!-- <bpel:sequence name="RadiologySeq"> -->
+			
+			<!-- invoke OrderRadiologyExam -->
+			<bpel:invoke name="Invoke-RadiologyService-OrderRadiologyExamination" partnerLink="radiologyService"
+				portType="rad:Radiology" operation="OrderRadiologyExamination" inputVariable="OrderRadExaminationRequest"
+				outputVariable="OrderRadExaminationResponse"></bpel:invoke>
+			
+			<!-- Assign values to all neccessary variables -->
+			<bpel:assign validate="no" name="SetVariables-Radiology">
+				<!-- MakePaymentRequest Variable -->
+				<bpel:copy>
+					<bpel:from>
+						<bpel:literal>
+							<rad:RadiologyOrderIDForPayment>RadiologyOrderIDForPayment</rad:RadiologyOrderIDForPayment>
+						</bpel:literal>
+					</bpel:from>
+					<bpel:to>$MakePaymentRequest.RadiologyOrderID</bpel:to>
+				</bpel:copy>
+				<bpel:copy>
+					<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
+					<bpel:to>$MakePaymentRequest.RadiologyOrderID</bpel:to>
+				</bpel:copy>
+				<!-- Op dit punt komt de source van PayLink -->
+				
+				<!-- RequestAppointmentRequest Variable -->
+				<bpel:copy>
+					<bpel:from>
+						<bpel:literal>
+							<rad:Appointment>
+								<OrderID>OrderID</OrderID>
+								<Date>2014-01-01</Date>
+							</rad:Appointment>
+						</bpel:literal>
+					</bpel:from>
+					<bpel:to>$RequestAppointmentRequest.RadiologyAppointmentRequest</bpel:to>
+				</bpel:copy>
+				<bpel:copy>
+					<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
+					<bpel:to>$RequestAppointmentRequest.RadiologyAppointmentRequest/OrderID</bpel:to>
+				</bpel:copy>
+				
+				<!-- PatientTransportOrder Variable -->
+				<bpel:copy>
+					<bpel:from>
+						<bpel:literal>
+							<tra:PatientOrder>
+								<PatientID>PatientID</PatientID>
+								<RequestingUnit>RequestingUnit</RequestingUnit>
+								<DestinationUnit>DestinationUnit</DestinationUnit>
+								<TransportationDate>2014-01-01</TransportationDate>
+							</tra:PatientOrder>
+						</bpel:literal>
+					</bpel:from>
+					<bpel:to>$PatientTransportOrder.PatientTransportOrder</bpel:to>
+				</bpel:copy>
+				<bpel:copy>
+					<bpel:from>$OrderRadExaminationRequest.Order/PatientID</bpel:from>
+					<bpel:to>$PatientTransportOrder.PatientTransportOrder/PatientID</bpel:to>
+				</bpel:copy>
+			</bpel:assign>
+			
+			<!-- invoke RequestAppointment -->
+			<bpel:invoke name="Invoke-RadiologyService-RequestAppointment" partnerLink="radiologyService"
+				portType="rad:Radiology" operation="RequestAppointment" inputVariable="RequestAppointmentRequest"
+				outputVariable="RequestAppointmentResponse"></bpel:invoke>
+			
+			<!-- invoke OrderPatientTransport -->
+			<bpel:invoke name="Invoke-TransportService-OrderPatientTransport" partnerLink="transportService"
+				portType="tra:Transportation" operation="OrderPatientTransport" inputVariable="PatientTransportOrder"></bpel:invoke>
+			
+			<!-- receive SendRadiologyReport (LET OP DIT WERKT NOG NIET) -->
+			<!-- variable die voor deze receive gebruikt wordt is: ReportRequest -->
+			
+			<!-- Hier wordt een dummie ReportRequest variable gemaakt omdat de Callback niet werkt :( -->
+			<bpel:assign validate="no" name="Make-ReportRequest">
+				<bpel:copy>
+					<bpel:from>
+						<bpel:literal>
+							<rcb:RadiologyReport>
+								<PatientID>PatientID</PatientID>
+								<RadiologyOrderID>RadiologyOrderID</RadiologyOrderID>
+								<DateOfExamination>2015-01-01</DateOfExamination>
+								<ReportText>Alles is goed!RAD!</ReportText>
+							</rcb:RadiologyReport>
+						</bpel:literal>
+					</bpel:from>
+					<bpel:to>$ReportRequest.RadiologyReport</bpel:to>
+				</bpel:copy>
+				<bpel:copy>
+					<bpel:from>$OrderRadExaminationRequest.Order/PatientID</bpel:from>
+					<bpel:to>$ReportRequest.RadiologyReport/PatientID</bpel:to>
+				</bpel:copy>
+				<bpel:copy>
+					<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
+					<bpel:to>$ReportRequest.RadiologyReport/RadiologyOrderID</bpel:to>
+				</bpel:copy>
+			</bpel:assign>
+			
+			<!-- Assign ReportRequest to StoreRadiologyReportRequest -->
+			<bpel:assign validate="no" name="ReportRequest-to-StoreRadiologyReportRequest">
+				<bpel:copy>
+					<bpel:from>
+						<bpel:literal>
+							<pat:RadiologyReport>
+								<PatientID>PatientID</PatientID>
+								<RadiologyOrderID>RadiologyOrderID</RadiologyOrderID>
+								<DateOfExamination>2014-01-01</DateOfExamination>
+								<ReportText>ReportText</ReportText>
+							</pat:RadiologyReport>
+						</bpel:literal>
+					</bpel:from>
+					<bpel:to>$StoreRadiologyReportRequest.RadiologyReport</bpel:to>
+				</bpel:copy>
+				<bpel:copy>
+					<bpel:from>$ReportRequest.RadiologyReport</bpel:from>
+					<bpel:to>$StoreRadiologyReportRequest.RadiologyReport</bpel:to>
+				</bpel:copy>
+			</bpel:assign>
+			
+			<!-- invoke StoreRadiologyReport -->
+			<bpel:invoke name="Invoke-PatientService-StoreRadiologyReport" partnerLink="patientService"
+				portType="pat:ElectronicPatientRecord" operation="StoreRadiologyReport" inputVariable="StoreRadiologyReportRequest"></bpel:invoke>
+			
+			<!-- Op dit punt komt de source van RadLink -->
+						
+			<!-- </bpel:sequence>
+			
+		</bpel:flow> -->
+	
+		<!-- Dit is zodat we een response krijgen voor de Ward Operation -->
+		<bpel:assign validate="no" name="ResponseTEST">
+			<bpel:copy>
+				<bpel:from>
+					<bpel:literal>
+						<tns:TesterElem>
+							<PatientID>PatientID</PatientID>
+							<OrderID>OrderID</OrderID>
+						</tns:TesterElem>
+					</bpel:literal>
+				</bpel:from>
+				<bpel:to>$Response.TestResponse</bpel:to>
+			</bpel:copy>
+			<bpel:copy>
+				<bpel:from>$StoreRadiologyReportRequest.RadiologyReport/PatientID</bpel:from>
+				<bpel:to>$Response.TestResponse/PatientID</bpel:to>
+			</bpel:copy>
+			<bpel:copy>
+				<bpel:from>$StoreRadiologyReportRequest.RadiologyReport/RadiologyOrderID</bpel:from>
+				<bpel:to>$Response.TestResponse/OrderID</bpel:to>
+			</bpel:copy>
+		</bpel:assign>
+	
 		<!-- Dit is het eind van de test response voor de Ward Operation --> 
 		<bpel:reply name="Reply-Response" partnerLink="ward"
 			portType="tns:WardServicePT" operation="AdmissionOrder" variable="Response"></bpel:reply>
-		
-	</bpel:sequence>
-	<!-- To zo ver het aanmaken van de patient en het initializeren van variabelen -->
 	
+	</bpel:sequence>
 </bpel:process>
 

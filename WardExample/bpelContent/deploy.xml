@@ -16,7 +16,7 @@
     <invoke partnerLink="patientService">
       <service name="PatService:PatService" port="PatientRecordPort"/>
     </invoke>
-    <invoke partnerLink="TransportService">
+    <invoke partnerLink="transportService">
       <service name="TransportationService:TransportationService" port="TransportationPort"/>
     </invoke>
     <invoke partnerLink="laboratoryService">
