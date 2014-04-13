@@ -4,3 +4,7 @@
 on database directory /Users/Anne/Documents/Studie/workspace/UT-SOA/apache-tomcat-6.0.39/webapps/ode/WEB-INF/derby-jpadb  
 
 Database Class Loader started - derby.database.classpath=''
+
+2014-04-13 11:16:45.974 GMT:
+Shutting down instance a816c00e-0145-5533-ef8e-00000332d488
+----------------------------------------------------------------
