@@ -7,7 +7,9 @@
 	xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
 	xmlns:tns="http://www.PAHospital.org/WardService/"
 	xmlns:lab="http://www.PAHospital.org/LabService/"
+	xmlns:lcb="http://www.PAHospital.org/LabCallbackService/"
 	xmlns:pat="http://www.PAHospital.org/PatService/"
+	xmlns:tra="http://www.PAHospital.org/TransportationService/"
 	xmlns:rad="http://www.PAHospital.org/RadiologyService/"
 	xmlns:rcb="http://www.PAHospital.org/RadiologyCallbackService/"
 	xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
@@ -19,6 +21,10 @@
 	<import namespace="http://www.PAHospital.org/RadiologyService/" location="RadService.wsdl"/>
 	<import namespace="http://www.PAHospital.org/PatService/" location="PatService.wsdl"/>
 	<import namespace="http://www.PAHospital.org/RadiologyCallbackService/" location="RadService-callback.wsdl"/>
+	<import namespace="http://www.PAHospital.org/LabService/" location="LabService.wsdl"/>
+	<import namespace="http://www.PAHospital.org/LabCallbackService/" location="LabService-callback.wsdl"/>
+	<import namespace="http://www.PAHospital.org/TransportationService/" location="TranspService.wsdl"/>
+	
 	
 	<!-- message -->
 	<message name="AdmissionOrderMessage">
@@ -35,7 +41,7 @@
 	<portType name="WardServicePT">
 		<operation name="AdmissionOrder">
 			<input message="tns:AdmissionOrderMessage"/>
-			<output message="tns:AdmissionOrderResponseMessage"/>
+			<output message="tns:TestResponseMessage"/>
 		</operation>
 	</portType>
 	
@@ -48,9 +54,18 @@
 		<plnk:role name="patientRecord" portType="pat:ElectronicPatientRecord"/>
 	</plnk:partnerLinkType>
 	
+	<plnk:partnerLinkType name="TranspServiceLinkType">
+		<plnk:role name="transportService" portType="tra:Transportation" />
+	</plnk:partnerLinkType>
+	
+	<plnk:partnerLinkType name="LabServiceLinkType">
+		<plnk:role name="laboratoryDept" portType="lab:Laboratory" />
+		<plnk:role name="laboratoryCallback" portType="lcb:LabCallback" />
+	</plnk:partnerLinkType>
+	
 	<plnk:partnerLinkType name="RadServiceLinkType">
 		<plnk:role name="radiologyDept" portType="rad:Radiology" />
-		<plnk:role name="radiologyCallBack" portType="rcb:RadiologyCallback" />
+		<plnk:role name="radiologyCallback" portType="rcb:RadiologyCallback" />
 	</plnk:partnerLinkType>
 
 	<!-- binding -->
