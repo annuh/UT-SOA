@@ -69,6 +69,12 @@
     	<bpel:variable name="StoreRadiologyReportRequest" messageType="pat:StoreRadiologyReportRequest" />
     	<bpel:variable name="StoreLabReportRequest" messageType="pat:StoreLabReportRequest" />
     	
+    	<bpel:variable name="RetrieveRadiologyReportRequest" messageType="pat:RetrieveRadiologyReportRequest" />
+    	<bpel:variable name="RetrieveRadiologyReportResponse" messageType="pat:RetrieveRadiologyReportResponse" />
+    	
+    	<bpel:variable name="RetrieveLabReportRequest" messageType="pat:RetrieveLabReportRequest" />
+    	<bpel:variable name="RetrieveLabReportResponse" messageType="pat:RetrieveLabReportResponse" />    	
+    	
     	<!-- RADIOLOGY -->
     	<bpel:variable name="OrderRadExaminationRequest" messageType="rad:RadiologyOrderRadExaminationRequest" />
     	<bpel:variable name="OrderRadExaminationResponse" messageType="rad:RadiologyOrderRadExaminationResponse" />
@@ -81,9 +87,15 @@
     	<bpel:variable name="PatientTransportOrder" messageType="tra:OrderPatientTransportRequest" />
     	
     	<bpel:variable name="ReportRequest" messageType="rcb:RadiologyReportRequest" />
+    	<bpel:variable name="ReportRequestTest" messageType="rcb:RadiologyReportRequest" />
     	
     	<!-- LABORATORY -->
     	<bpel:variable name="OrderLabTestRequest" messageType="lab:LaboratoryOrderLabTestRequest" />
+    	<bpel:variable name="OrderLabTestResponse" messageType="lab:LaboratoryOrderLabTestResponse" />
+    	
+    	<bpel:variable name="SampleTransportOrder" messageType="tra:OrderSampleTransportRequest" />
+    	
+    	<bpel:variable name="LabReportResponse" messageType="lcb:SendLabReportResponse" />
     </bpel:variables>
 
 	<bpel:sequence name="main">
@@ -92,7 +104,7 @@
 			createInstance="yes">
 		</bpel:receive> 
 		
-		<bpel:assign validate="no" name="InitialPatientVariable">
+		<bpel:assign validate="no" name="InitialPatientVariable-and-Response">
 			<bpel:copy>
 				<bpel:from>
 					<bpel:literal>
@@ -140,7 +152,16 @@
 			<bpel:invoke name="Invoke-PatientService-CreatePatientRecord" partnerLink="patientService"
 				portType="pat:ElectronicPatientRecord" operation="CreatePatientRecord" inputVariable="CreatePatientRecordRequest"
 				outputVariable="CreatePatientRecordResponse"></bpel:invoke>
-				
+			
+			<bpel:else>
+				<!-- Maak een dummy response aan met het goede patientID -->
+				<bpel:assign>
+					<bpel:copy>
+						<bpel:from>$AdmissionForm.AdmissionOrder/PatientID</bpel:from>
+						<bpel:to>$CreatePatientRecordResponse.PatientID</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+			</bpel:else>	
 		</bpel:if>
 
 		<!-- Initialize OrderRadExamRequest Variable and copy PatientID -->
@@ -198,141 +219,346 @@
 		<!-- LabLink: source = LaboratorySequence, target = ReviewSequence  -->
 		<!-- PayLink: source = RadiologySequence, target = PaymentSequence  -->
 		
-		<!-- <bpel:flow name="parallel-compisition">  -->
-			<!-- <bpel:links>
-				<bpel:link name="RadLink" />
+		<bpel:flow name="parallel-compisition">
+			<bpel:links>
+			 	<bpel:link name="RadLink" />
 				<bpel:link name="LabLink" />
 				<bpel:link name="PayLink" />
-			</bpel:links> -->
+			</bpel:links>
 			
-			<!-- <bpel:sequence name="RadiologySeq"> -->
-			
-			<!-- invoke OrderRadiologyExam -->
-			<bpel:invoke name="Invoke-RadiologyService-OrderRadiologyExamination" partnerLink="radiologyService"
-				portType="rad:Radiology" operation="OrderRadiologyExamination" inputVariable="OrderRadExaminationRequest"
-				outputVariable="OrderRadExaminationResponse"></bpel:invoke>
-			
-			<!-- Assign values to all neccessary variables -->
-			<bpel:assign validate="no" name="SetVariables-Radiology">
-				<!-- MakePaymentRequest Variable -->
-				<bpel:copy>
-					<bpel:from>
-						<bpel:literal>
-							<rad:RadiologyOrderIDForPayment>RadiologyOrderIDForPayment</rad:RadiologyOrderIDForPayment>
-						</bpel:literal>
-					</bpel:from>
-					<bpel:to>$MakePaymentRequest.RadiologyOrderID</bpel:to>
-				</bpel:copy>
-				<bpel:copy>
-					<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
-					<bpel:to>$MakePaymentRequest.RadiologyOrderID</bpel:to>
-				</bpel:copy>
-				<!-- Op dit punt komt de source van PayLink -->
+			<bpel:sequence name="RadiologySeq">
 				
-				<!-- RequestAppointmentRequest Variable -->
-				<bpel:copy>
-					<bpel:from>
-						<bpel:literal>
-							<rad:Appointment>
-								<OrderID>OrderID</OrderID>
-								<Date>2014-01-01</Date>
-							</rad:Appointment>
-						</bpel:literal>
-					</bpel:from>
-					<bpel:to>$RequestAppointmentRequest.RadiologyAppointmentRequest</bpel:to>
-				</bpel:copy>
-				<bpel:copy>
-					<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
-					<bpel:to>$RequestAppointmentRequest.RadiologyAppointmentRequest/OrderID</bpel:to>
-				</bpel:copy>
+				<!-- invoke OrderRadiologyExam -->
+				<bpel:invoke name="Invoke-RadiologyService-OrderRadiologyExamination" partnerLink="radiologyService"
+					portType="rad:Radiology" operation="OrderRadiologyExamination" inputVariable="OrderRadExaminationRequest"
+					outputVariable="OrderRadExaminationResponse"></bpel:invoke>
 				
-				<!-- PatientTransportOrder Variable -->
-				<bpel:copy>
-					<bpel:from>
-						<bpel:literal>
-							<tra:PatientOrder>
-								<PatientID>PatientID</PatientID>
-								<RequestingUnit>RequestingUnit</RequestingUnit>
-								<DestinationUnit>DestinationUnit</DestinationUnit>
-								<TransportationDate>2014-01-01</TransportationDate>
-							</tra:PatientOrder>
-						</bpel:literal>
-					</bpel:from>
-					<bpel:to>$PatientTransportOrder.PatientTransportOrder</bpel:to>
-				</bpel:copy>
-				<bpel:copy>
-					<bpel:from>$OrderRadExaminationRequest.Order/PatientID</bpel:from>
-					<bpel:to>$PatientTransportOrder.PatientTransportOrder/PatientID</bpel:to>
-				</bpel:copy>
-			</bpel:assign>
-			
-			<!-- invoke RequestAppointment -->
-			<bpel:invoke name="Invoke-RadiologyService-RequestAppointment" partnerLink="radiologyService"
-				portType="rad:Radiology" operation="RequestAppointment" inputVariable="RequestAppointmentRequest"
-				outputVariable="RequestAppointmentResponse"></bpel:invoke>
-			
-			<!-- invoke OrderPatientTransport -->
-			<bpel:invoke name="Invoke-TransportService-OrderPatientTransport" partnerLink="transportService"
-				portType="tra:Transportation" operation="OrderPatientTransport" inputVariable="PatientTransportOrder"></bpel:invoke>
-			
-			<!-- receive SendRadiologyReport (LET OP DIT WERKT NOG NIET) -->
-			<!-- variable die voor deze receive gebruikt wordt is: ReportRequest -->
-			
-			<!-- Hier wordt een dummie ReportRequest variable gemaakt omdat de Callback niet werkt :( -->
-			<bpel:assign validate="no" name="Make-ReportRequest">
-				<bpel:copy>
-					<bpel:from>
-						<bpel:literal>
-							<rcb:RadiologyReport>
-								<PatientID>PatientID</PatientID>
-								<RadiologyOrderID>RadiologyOrderID</RadiologyOrderID>
-								<DateOfExamination>2015-01-01</DateOfExamination>
-								<ReportText>Alles is goed!RAD!</ReportText>
-							</rcb:RadiologyReport>
-						</bpel:literal>
-					</bpel:from>
-					<bpel:to>$ReportRequest.RadiologyReport</bpel:to>
-				</bpel:copy>
-				<bpel:copy>
-					<bpel:from>$OrderRadExaminationRequest.Order/PatientID</bpel:from>
-					<bpel:to>$ReportRequest.RadiologyReport/PatientID</bpel:to>
-				</bpel:copy>
-				<bpel:copy>
-					<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
-					<bpel:to>$ReportRequest.RadiologyReport/RadiologyOrderID</bpel:to>
-				</bpel:copy>
-			</bpel:assign>
-			
-			<!-- Assign ReportRequest to StoreRadiologyReportRequest -->
-			<bpel:assign validate="no" name="ReportRequest-to-StoreRadiologyReportRequest">
-				<bpel:copy>
-					<bpel:from>
-						<bpel:literal>
-							<pat:RadiologyReport>
-								<PatientID>PatientID</PatientID>
-								<RadiologyOrderID>RadiologyOrderID</RadiologyOrderID>
-								<DateOfExamination>2014-01-01</DateOfExamination>
-								<ReportText>ReportText</ReportText>
-							</pat:RadiologyReport>
-						</bpel:literal>
-					</bpel:from>
-					<bpel:to>$StoreRadiologyReportRequest.RadiologyReport</bpel:to>
-				</bpel:copy>
-				<bpel:copy>
-					<bpel:from>$ReportRequest.RadiologyReport</bpel:from>
-					<bpel:to>$StoreRadiologyReportRequest.RadiologyReport</bpel:to>
-				</bpel:copy>
-			</bpel:assign>
-			
-			<!-- invoke StoreRadiologyReport -->
-			<bpel:invoke name="Invoke-PatientService-StoreRadiologyReport" partnerLink="patientService"
-				portType="pat:ElectronicPatientRecord" operation="StoreRadiologyReport" inputVariable="StoreRadiologyReportRequest"></bpel:invoke>
-			
-			<!-- Op dit punt komt de source van RadLink -->
+				<!-- Assign values to all neccessary variables -->
+				<bpel:assign validate="no" name="SetVariables-Radiology">
+					<!-- MakePaymentRequest Variable -->
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<rad:RadiologyOrderIDForPayment>RadiologyOrderIDForPayment</rad:RadiologyOrderIDForPayment>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$MakePaymentRequest.RadiologyOrderID</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
+						<bpel:to>$MakePaymentRequest.RadiologyOrderID</bpel:to>
+					</bpel:copy>
+					<!-- Op dit punt komt de source van PayLink -->
+					<bpel:sources>
+						<bpel:source linkName="PayLink" />
+					</bpel:sources>
+	
+					
+					<!-- RequestAppointmentRequest Variable -->
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<rad:Appointment>
+									<OrderID>OrderID</OrderID>
+									<Date>2014-01-01</Date>
+								</rad:Appointment>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$RequestAppointmentRequest.RadiologyAppointmentRequest</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
+						<bpel:to>$RequestAppointmentRequest.RadiologyAppointmentRequest/OrderID</bpel:to>
+					</bpel:copy>
+					
+					<!-- PatientTransportOrder Variable -->
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<tra:PatientOrder>
+									<PatientID>PatientID</PatientID>
+									<RequestingUnit>RequestingUnit</RequestingUnit>
+									<DestinationUnit>DestinationUnit</DestinationUnit>
+									<TransportationDate>2014-01-01</TransportationDate>
+								</tra:PatientOrder>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$PatientTransportOrder.PatientTransportOrder</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$OrderRadExaminationRequest.Order/PatientID</bpel:from>
+						<bpel:to>$PatientTransportOrder.PatientTransportOrder/PatientID</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				
+				<!-- invoke RequestAppointment -->
+				<bpel:invoke name="Invoke-RadiologyService-RequestAppointment" partnerLink="radiologyService"
+					portType="rad:Radiology" operation="RequestAppointment" inputVariable="RequestAppointmentRequest"
+					outputVariable="RequestAppointmentResponse"></bpel:invoke>
+				
+				<!-- invoke OrderPatientTransport -->
+				<bpel:invoke name="Invoke-TransportService-OrderPatientTransport" partnerLink="transportService"
+					portType="tra:Transportation" operation="OrderPatientTransport" inputVariable="PatientTransportOrder"></bpel:invoke>
+				
+				<!-- receive SendRadiologyReport (LET OP DIT WERKT NOG NIET) -->
+				<!-- variable die voor deze receive gebruikt wordt is: ReportRequest -->
+				<!-- <bpel:receive name="Receive-RadiologyReportCallback" partnerLink="radiologyService"
+					portType="rcb:RadiologyCallback" operation="SendRadiologyReport" variable="ReportRequestTest"></bpel:receive> -->
+				
+				<!-- Hier wordt een dummie ReportRequest variable gemaakt omdat de Callback niet werkt :( -->
+				<bpel:assign validate="no" name="Make-ReportRequest">
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<rcb:RadiologyReport>
+									<PatientID>PatientID</PatientID>
+									<RadiologyOrderID>RadiologyOrderID</RadiologyOrderID>
+									<DateOfExamination>2015-01-01</DateOfExamination>
+									<ReportText>Alles is goed!RAD!</ReportText>
+								</rcb:RadiologyReport>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$ReportRequest.RadiologyReport</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$OrderRadExaminationRequest.Order/PatientID</bpel:from>
+						<bpel:to>$ReportRequest.RadiologyReport/PatientID</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$OrderRadExaminationResponse.RadiologyOrderID</bpel:from>
+						<bpel:to>$ReportRequest.RadiologyReport/RadiologyOrderID</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				
+				<!-- Assign ReportRequest to StoreRadiologyReportRequest -->
+				<bpel:assign validate="no" name="ReportRequest-to-StoreRadiologyReportRequest">
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<pat:RadiologyReport>
+									<PatientID>PatientID</PatientID>
+									<RadiologyOrderID>RadiologyOrderID</RadiologyOrderID>
+									<DateOfExamination>2014-01-01</DateOfExamination>
+									<ReportText>ReportText</ReportText>
+								</pat:RadiologyReport>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$StoreRadiologyReportRequest.RadiologyReport</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$ReportRequest.RadiologyReport</bpel:from>
+						<bpel:to>$StoreRadiologyReportRequest.RadiologyReport</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				
+				<!-- invoke StoreRadiologyReport -->
+				<bpel:invoke name="Invoke-PatientService-StoreRadiologyReport" partnerLink="patientService"
+					portType="pat:ElectronicPatientRecord" operation="StoreRadiologyReport" inputVariable="StoreRadiologyReportRequest"></bpel:invoke>
+				
+				<!-- Op dit punt komt de source van RadLink -->
+				<bpel:sources>
+						<bpel:source linkName="RadLink" />
+				</bpel:sources>
 						
-			<!-- </bpel:sequence>
+			</bpel:sequence>
 			
-		</bpel:flow> -->
+			<bpel:sequence name="PaymentSequence">
+				<bpel:targets>
+					<bpel:target linkName="PayLink" />
+				</bpel:targets>
+				<!-- Invoke MakePayment -->
+				<bpel:invoke name="Invoke-RadiologyService-MakePayment" partnerLink="radiologyService"
+					portType="rad:Radiology" operation="MakePayment" inputVariable="MakePaymentRequest"></bpel:invoke>
+			</bpel:sequence>
+			
+			<bpel:sequence name="LaboratorySeq">
+			<!-- Aangezien de LabService en LabCallbackService nog niet bestaan zullen de invokes/receives hier naartoe niet werken -->
+			
+				<!-- Invoke OrderLabTest -->
+				<!-- <bpel:invoke name="Invoke-LaboratoryService-OrderLabTest" partnerLink="laboratoryService"
+					portType="lab:Laboratory" operation="OrderLabTest" inputVariable="OrderLabTestRequest"
+					outputVariable="OrderLabTestResponse"></bpel:invoke> -->
+					
+				<!-- Assign waardes aan OrderLabTestResponse (aangezien service nog niet bestaat) -->
+				<bpel:assign>
+					<bpel:copy>
+						<bpel:from>$CreatePatientRecordResponse.PatientID</bpel:from>
+						<bpel:to>$OrderLabTestResponse.LabOrderID</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				
+				<!-- Assign initiate SampleTransportOrder -->
+				<bpel:assign>
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<tra:SampleOrder>
+									<PatientID>PatientID</PatientID>
+									<RequestingUnit>RequestingUnit</RequestingUnit>
+									<SampleID>SampleID</SampleID>
+								</tra:SampleOrder>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$SampleTransportOrder.SampleTransportOrder</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$CreatePatientRecordResponse.PatientID</bpel:from>
+						<bpel:to>$SampleTransportOrder.SampleTransportOrder/PatientID</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$OrderLabTestRequest.LabOrder/SampleID</bpel:from>
+						<bpel:to>$SampleTransportOrder.SampleTransportOrder/SampleID</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				
+				<!-- Invoke OrderSampleTransport -->
+				<!-- <bpel:invoke name="Invoke-TransportService-OrderSampleTransport" partnerLink="transportService"
+					portType="tra:Transportation" operation="OrderSampleTransport" inputVariable="SampleTransportOrder"></bpel:invoke> -->
+				
+				<!-- receive SendLabReportResponse (LET OP DIT WERKT NOG NIET) -->
+				<!-- variable die voor deze receive gebruikt wordt is: LabReportResponse -->
+				<!-- <bpel:receive name="Recieve-LaboratoryCallback" partnerLink="laboratoryService"
+					portType="lcb:LabCallback" operation="SendLabReport" variable="LabReportResponse"></bpel:receive> -->
+				
+				<!-- Hier wordt een dummie LabReportResponse variable gemaakt omdat de Callback niet werkt :( -->
+				<bpel:assign>
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<lcb:LabReport>
+									<LabOrderID>LabOrderID</LabOrderID>
+									<PatientID>PatientID</PatientID>
+									<SampleID>SampleID</SampleID>
+									<LabValues>
+										<LabParameter>LabParameter</LabParameter>
+										<LabValue>1.0</LabValue>
+									</LabValues>
+								</lcb:LabReport>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$LabReportResponse.LabReport</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$OrderLabTestResponse.LabOrderID</bpel:from>
+						<bpel:to>$LabReportResponse.LabReport/LabOrderID</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$CreatePatientRecordResponse.PatientID</bpel:from>
+						<bpel:to>$LabReportResponse.LabReport/PatientID</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$SampleTransportOrder.SampleTransportOrder/SampleID</bpel:from>
+						<bpel:to>$LabReportResponse.LabReport/SampleID</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				
+				<!-- Assign LabReportResponse to StoreLabReportRequest -->
+				<bpel:assign>
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<lcb:LabReport>
+									<LabOrderID>LabOrderID</LabOrderID>
+									<PatientID>PatientID</PatientID>
+									<SampleID>SampleID</SampleID>
+									<LabValues>
+										<LabParameter>LabParameter</LabParameter>
+										<LabValue>1.0</LabValue>
+									</LabValues>
+								</lcb:LabReport>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$StoreLabReportRequest.LabReport</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$LabReportResponse.LabReport</bpel:from>
+						<bpel:to>$StoreLabReportRequest.LabReport</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				
+				<!-- Invoke StoreLabReport -->
+				<bpel:invoke name="Invoke-PatientService-StoreLabReport" partnerLink="patientService"
+					portType="pat:ElectronicPatientRecord" operation="StoreLabReport" inputVariable="StoreLabReportRequest"></bpel:invoke>
+				
+				<!-- Op dit punt komt de source van LabLink -->
+				<bpel:sources>
+						<bpel:source linkName="LabLink" />
+				</bpel:sources>
+				
+			</bpel:sequence>
+			
+			<bpel:sequence name="ReviewSeq">
+				
+				<!-- Assign initiate RetrieveRadiologyReportRequest and RetrieveLabReportRequest -->
+				<bpel:assign>
+					<!-- First RetrieveRadiologyReportRequest -->
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<lab:RadiologyReportOrder>
+									<PatientID>PatientID</PatientID>
+									<RadiologyOrderID>RadiologyOrderID</RadiologyOrderID>
+								</lab:RadiologyReportOrder>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$RetrieveRadiologyReportRequest.RadiologyReportOrder</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$CreatePatientRecordResponse.PatientID</bpel:from>
+						<bpel:to>$RetrieveRadiologyReportRequest.RadiologyReportOrder/PatientID</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$StoreRadiologyReportRequest.RadiologyReport/RadiologyOrderID</bpel:from>
+						<bpel:to>$RetrieveRadiologyReportRequest.RadiologyReportOrder/RadiologyOrderID</bpel:to>
+					</bpel:copy>
+										
+					<!-- Second RetrieveLabReportRequest -->
+					<bpel:copy>
+						<bpel:from>
+							<bpel:literal>
+								<lab:LabReportOrder>
+									<PatientID>PatientID</PatientID>
+									<LabOrderID>LabOrderID</LabOrderID>
+								</lab:LabReportOrder>
+							</bpel:literal>
+						</bpel:from>
+						<bpel:to>$RetrieveLabReportRequest.LabReportOrder</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$CreatePatientRecordResponse.PatientID</bpel:from>
+						<bpel:to>$RetrieveLabReportRequest.LabReportOrder/PatientID</bpel:to>
+					</bpel:copy>
+					<bpel:copy>
+						<bpel:from>$StoreLabReportRequest.LabReport/LabOrderID</bpel:from>
+						<bpel:to>$RetrieveLabReportRequest.LabReportOrder/LabOrderID</bpel:to>
+					</bpel:copy>
+				</bpel:assign>
+				
+				<!-- TargetLinks from RadLink and LabLink come here -->
+				<bpel:targets>
+					<bpel:target linkName="RadLink" />
+					<bpel:target linkName="LabLink" />
+				</bpel:targets>
+				
+				<!-- Invoke RetrieveLabReport -->
+				<bpel:invoke name="Invoke-PatientService-RetrieveLabReport" partnerLink="patientService"
+					portType="pat:ElectronicPatientRecord" operation="RetrieveLabReport" inputVariable="RetrieveLabReportRequest"
+					outputVariable="RetrieveLabReportResponse"></bpel:invoke>
+				
+				<!-- Invoke RetrieveRadiologyReport -->
+				<bpel:invoke name="Invoke-PatientService-RetrieveRadiologyReport" partnerLink="patientService"
+					portType="pat:ElectronicPatientRecord" operation="RetrieveRadiologyReport" inputVariable="RetrieveRadiologyReportRequest"
+					outputVariable="RetrieveRadiologyReportResponse"></bpel:invoke>
+				
+				<!-- Here should be some kind of physician check, don't know how we want to implement this yet	-->
+				<!-- Maybe compare the results from the store/retrieve to the patient record??					-->
+				<!-- The output variables of RetrieveLabReport and RetrieveRadiologyReport are:					-->
+				<!-- 															RetrieveLabReportResponse		-->
+				<!-- 															RetrieveRadiologyReportResponse	-->
+				
+			</bpel:sequence>
+			
+		</bpel:flow>
 	
 		<!-- Dit is zodat we een response krijgen voor de Ward Operation -->
 		<bpel:assign validate="no" name="ResponseTEST">
@@ -341,7 +567,13 @@
 					<bpel:literal>
 						<tns:TesterElem>
 							<PatientID>PatientID</PatientID>
-							<OrderID>OrderID</OrderID>
+							<RadiologyOrderID>OrderID</RadiologyOrderID>
+							<ReportText>ReportText</ReportText>
+							<LabOrderID>OrderID</LabOrderID>
+							<LabValues>
+								<LabParameter>LabPara</LabParameter>
+								<LabValue>10.01</LabValue>
+							</LabValues>
 						</tns:TesterElem>
 					</bpel:literal>
 				</bpel:from>
@@ -353,7 +585,19 @@
 			</bpel:copy>
 			<bpel:copy>
 				<bpel:from>$StoreRadiologyReportRequest.RadiologyReport/RadiologyOrderID</bpel:from>
-				<bpel:to>$Response.TestResponse/OrderID</bpel:to>
+				<bpel:to>$Response.TestResponse/RadiologyOrderID</bpel:to>
+			</bpel:copy>
+			<bpel:copy>
+				<bpel:from>$StoreRadiologyReportRequest.RadiologyReport/ReportText</bpel:from>
+				<bpel:to>$Response.TestResponse/ReportText</bpel:to>
+			</bpel:copy>
+			<bpel:copy>
+				<bpel:from>$StoreLabReportRequest.LabReport/LabOrderID</bpel:from>
+				<bpel:to>$Response.TestResponse/LabOrderID</bpel:to>
+			</bpel:copy>
+			<bpel:copy>
+				<bpel:from>$StoreLabReportRequest.LabReport/LabValues</bpel:from>
+				<bpel:to>$Response.TestResponse/LabValues</bpel:to>
 			</bpel:copy>
 		</bpel:assign>
 	
@@ -363,4 +607,3 @@
 	
 	</bpel:sequence>
 </bpel:process>
-

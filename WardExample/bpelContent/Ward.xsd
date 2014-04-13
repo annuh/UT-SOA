@@ -17,7 +17,17 @@
 		<xs:complexType>
 			<xs:sequence>
 				<xs:element name="PatientID" type="xsd:string"/>
-				<xs:element name="OrderID" type="xsd:string"/>
+				<xs:element name="RadiologyOrderID" type="xsd:string"/>
+				<xs:element name="ReportText" type="xsd:string"/>
+				<xs:element name="LabOrderID" type="xsd:string"/>
+				<xsd:element name="LabValues" maxOccurs="unbounded">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="LabParameter" type="xsd:string" />
+							<xsd:element name="LabValue" type="xsd:decimal" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
