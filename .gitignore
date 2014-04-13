@@ -1,5 +1,6 @@
 
 apache-tomcat-6.0.39/logs/
+.metadata/*
 
 *.dat
 
@@ -8,7 +9,3 @@ apache-tomcat-6.0.39/logs/
 *.out
 
 *.log
-
-.metadata/.log
-
-.metadata/.log
