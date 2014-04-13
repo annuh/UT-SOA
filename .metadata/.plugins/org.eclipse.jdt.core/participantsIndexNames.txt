@@ -1,7 +1,0 @@
-INDEX VERSION 1.126
-C:\Users\Victoria Falls\Documents\GitHub\UT-SOA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4108534651.index
-\LabServer\src
-C:\Users\Victoria Falls\Documents\GitHub\UT-SOA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3748093299.index
-\LabServer\src
-C:\Users\Victoria Falls\Documents\GitHub\UT-SOA\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\4255237349.index
-\LabServer\src

@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<section name="Workbench">
-	<section name="org.eclipse.bpel.ui.wizards.NewBpelFileWizard">
-		<item value="" key="process-name"/>
-	</section>
-</section>
