@@ -1,6 +1,7 @@
 
 apache-tomcat-6.0.39/logs/*
 apache-tomcat-6.0.39/temp/*
+apache-tomcat-6.0.39/webapps/ode/WEB-INF/derby-jpadb/log/*
 .metadata/*
 
 *.dat
@@ -10,3 +11,7 @@ apache-tomcat-6.0.39/temp/*
 *.out
 
 *.log
+
+apache-tomcat-6.0.39/webapps/ode/WEB-INF/derby-jpadb/log/logmirror.ctrl
+
+apache-tomcat-6.0.39/work/Catalina/localhost/axis2/SESSIONS.ser

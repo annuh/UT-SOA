@@ -14,6 +14,7 @@
 	xmlns:rcb="http://www.PAHospital.org/RadiologyCallbackService/"
 	xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype"
 	xmlns:nss="http://www.PAHospital.org/schema"
+	xmlns:vprop="http://docs.oasis-open.org/wsbpel/2.0/varprop"
 	targetNamespace="http://www.PAHospital.org/WardService/">
   
 	<!-- types -->
@@ -67,6 +68,20 @@
 		<plnk:role name="radiologyDept" portType="rad:Radiology" />
 		<plnk:role name="radiologyCallback" portType="rcb:RadiologyCallback" />
 	</plnk:partnerLinkType>
+
+	<!-- properties -->
+	<vprop:property name="radiologyOrderID" type="xsd:string" />
+	<vprop:propertyAlias propertyName="tns:radiologyOrderID" messageType="rcb:RadiologyReportRequest" part="RadiologyReport">
+		<vprop:query><![CDATA[/RadiologyOrderID]]></vprop:query>	
+	</vprop:propertyAlias>
+	<vprop:propertyAlias propertyName="tns:radiologyOrderID" messageType="rad:RadiologyOrderRadExaminationResponse" part="RadiologyOrderID"></vprop:propertyAlias>
+
+	<vprop:property name="laboratoryOrderID" type="xsd:string" />
+	<vprop:propertyAlias propertyName="tns:laboratoryOrderID" messageType="lcb:SendLabReportResponse" part="LabReport">
+		<vprop:query><![CDATA[/LabOrderID]]></vprop:query>	
+	</vprop:propertyAlias>
+	<vprop:propertyAlias propertyName="tns:laboratoryOrderID" messageType="lab:LaboratoryOrderLabTestResponse" part="LabOrderID"></vprop:propertyAlias>
+
 
 	<!-- binding -->
 	<binding name="WardBinding" type="tns:WardServicePT">

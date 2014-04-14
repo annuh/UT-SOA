@@ -31,9 +31,10 @@
 	<bpel:import location="TranspService.wsdl" namespace="http://www.PAHospital.org/TransportationService/"
 			importType="http://schemas.xmlsoap.org/wsdl/" />
 	
-	<!-- <bpel:correlationSets>
-		<bpel:correlationSet name="PatientID" properties="tns:PatientID" />
-	</bpel:correlationSets>  -->
+	<bpel:correlationSets> 
+		<bpel:correlationSet name="radOrderID" properties="tns:radiologyOrderID" />
+		<bpel:correlationSet name="labOrderID" properties="tns:laboratoryOrderID" />
+	</bpel:correlationSets>
 	
     <!-- ================================================================= -->         
     <!-- ORCHESTRATION LOGIC                                               -->
@@ -218,7 +219,7 @@
 		<!-- RadLink: source = RadiologySequence, target = ReviewSequence	-->
 		<!-- LabLink: source = LaboratorySequence, target = ReviewSequence  -->
 		<!-- PayLink: source = RadiologySequence, target = PaymentSequence  -->
-		
+
 		<bpel:flow name="parallel-compisition">
 			<bpel:links>
 			 	<bpel:link name="RadLink" />
@@ -231,7 +232,11 @@
 				<!-- invoke OrderRadiologyExam -->
 				<bpel:invoke name="Invoke-RadiologyService-OrderRadiologyExamination" partnerLink="radiologyService"
 					portType="rad:Radiology" operation="OrderRadiologyExamination" inputVariable="OrderRadExaminationRequest"
-					outputVariable="OrderRadExaminationResponse"></bpel:invoke>
+					outputVariable="OrderRadExaminationResponse">
+						<bpel:correlations>
+							<bpel:correlation set="radOrderID" initiate="yes" pattern="response" />
+						</bpel:correlations>
+					</bpel:invoke>
 				
 				<!-- Assign values to all neccessary variables -->
 				<bpel:assign validate="no" name="SetVariables-Radiology">
@@ -302,8 +307,12 @@
 				
 				<!-- receive SendRadiologyReport (LET OP DIT WERKT NOG NIET) -->
 				<!-- variable die voor deze receive gebruikt wordt is: ReportRequest -->
-				<!-- <bpel:receive name="Receive-RadiologyReportCallback" partnerLink="radiologyService"
-					portType="rcb:RadiologyCallback" operation="SendRadiologyReport" variable="ReportRequestTest"></bpel:receive> -->
+				<bpel:receive name="Receive-RadiologyReportCallback" partnerLink="radiologyService"
+					portType="rcb:RadiologyCallback" operation="SendRadiologyReport" variable="ReportRequestTest">
+					<bpel:correlations>
+						<bpel:correlation set="radOrderID" initiate="no" />
+					</bpel:correlations>
+				</bpel:receive>
 				
 				<!-- Hier wordt een dummie ReportRequest variable gemaakt omdat de Callback niet werkt :( -->
 				<bpel:assign validate="no" name="Make-ReportRequest">
@@ -375,17 +384,22 @@
 			<!-- Aangezien de LabService en LabCallbackService nog niet bestaan zullen de invokes/receives hier naartoe niet werken -->
 			
 				<!-- Invoke OrderLabTest -->
-				<!-- <bpel:invoke name="Invoke-LaboratoryService-OrderLabTest" partnerLink="laboratoryService"
+				<bpel:invoke name="Invoke-LaboratoryService-OrderLabTest" partnerLink="laboratoryService"
 					portType="lab:Laboratory" operation="OrderLabTest" inputVariable="OrderLabTestRequest"
-					outputVariable="OrderLabTestResponse"></bpel:invoke> -->
+					outputVariable="OrderLabTestResponse">
+					<bpel:correlations>
+						<bpel:correlation set="labOrderID" initiate="yes" pattern="response" />
+					</bpel:correlations>
+				</bpel:invoke>
 					
 				<!-- Assign waardes aan OrderLabTestResponse (aangezien service nog niet bestaat) -->
-				<bpel:assign>
+<!-- 				<bpel:assign>
 					<bpel:copy>
 						<bpel:from>$CreatePatientRecordResponse.PatientID</bpel:from>
 						<bpel:to>$OrderLabTestResponse.LabOrderID</bpel:to>
 					</bpel:copy>
-				</bpel:assign>
+				</bpel:assign> -->
+				
 				
 				<!-- Assign initiate SampleTransportOrder -->
 				<bpel:assign>
@@ -412,16 +426,20 @@
 				</bpel:assign>
 				
 				<!-- Invoke OrderSampleTransport -->
-				<!-- <bpel:invoke name="Invoke-TransportService-OrderSampleTransport" partnerLink="transportService"
-					portType="tra:Transportation" operation="OrderSampleTransport" inputVariable="SampleTransportOrder"></bpel:invoke> -->
+				<bpel:invoke name="Invoke-TransportService-OrderSampleTransport" partnerLink="transportService"
+					portType="tra:Transportation" operation="OrderSampleTransport" inputVariable="SampleTransportOrder"></bpel:invoke>
 				
 				<!-- receive SendLabReportResponse (LET OP DIT WERKT NOG NIET) -->
 				<!-- variable die voor deze receive gebruikt wordt is: LabReportResponse -->
-				<!-- <bpel:receive name="Recieve-LaboratoryCallback" partnerLink="laboratoryService"
-					portType="lcb:LabCallback" operation="SendLabReport" variable="LabReportResponse"></bpel:receive> -->
+				<bpel:receive name="Recieve-LaboratoryCallback" partnerLink="laboratoryService"
+					portType="lcb:LabCallback" operation="SendLabReport" variable="LabReportResponse">
+					<bpel:correlations>
+						<bpel:correlation set="labOrderID" initiate="no" />
+					</bpel:correlations>	
+				</bpel:receive>
 				
 				<!-- Hier wordt een dummie LabReportResponse variable gemaakt omdat de Callback niet werkt :( -->
-				<bpel:assign>
+<!-- 				<bpel:assign>
 					<bpel:copy>
 						<bpel:from>
 							<bpel:literal>
@@ -450,7 +468,7 @@
 						<bpel:from>$SampleTransportOrder.SampleTransportOrder/SampleID</bpel:from>
 						<bpel:to>$LabReportResponse.LabReport/SampleID</bpel:to>
 					</bpel:copy>
-				</bpel:assign>
+				</bpel:assign> -->
 				
 				<!-- Assign LabReportResponse to StoreLabReportRequest -->
 				<bpel:assign>
@@ -557,9 +575,8 @@
 				<!-- 															RetrieveRadiologyReportResponse	-->
 				
 			</bpel:sequence>
-			
 		</bpel:flow>
-	
+
 		<!-- Dit is zodat we een response krijgen voor de Ward Operation -->
 		<bpel:assign validate="no" name="ResponseTEST">
 			<bpel:copy>
@@ -579,6 +596,7 @@
 				</bpel:from>
 				<bpel:to>$Response.TestResponse</bpel:to>
 			</bpel:copy>
+			
 			<bpel:copy>
 				<bpel:from>$StoreRadiologyReportRequest.RadiologyReport/PatientID</bpel:from>
 				<bpel:to>$Response.TestResponse/PatientID</bpel:to>
@@ -592,13 +610,14 @@
 				<bpel:to>$Response.TestResponse/ReportText</bpel:to>
 			</bpel:copy>
 			<bpel:copy>
-				<bpel:from>$StoreLabReportRequest.LabReport/LabOrderID</bpel:from>
+				<bpel:from>$OrderLabTestResponse.LabOrderID</bpel:from>
 				<bpel:to>$Response.TestResponse/LabOrderID</bpel:to>
 			</bpel:copy>
 			<bpel:copy>
 				<bpel:from>$StoreLabReportRequest.LabReport/LabValues</bpel:from>
 				<bpel:to>$Response.TestResponse/LabValues</bpel:to>
 			</bpel:copy>
+			
 		</bpel:assign>
 	
 		<!-- Dit is het eind van de test response voor de Ward Operation --> 
