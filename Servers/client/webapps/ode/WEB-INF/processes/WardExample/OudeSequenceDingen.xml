@@ -1,0 +1,79 @@
+	<bpel:sequence name="main">
+		<bpel:receive name="Recieve-admissionForm" partnerLink="ward"
+			portType="tns:WardServicePT" operation="AdmissionOrder" variable="admissionForm"
+			createInstance="yes">
+		</bpel:receive>
+		
+		<bpel:assign validate="no" name="Assign-PatientRecord">
+			<bpel:copy>
+				<bpel:from>$admissionForm.AdmissionOrder</bpel:from>
+				<bpel:to>$patient.Patient</bpel:to>
+			</bpel:copy>
+		</bpel:assign>
+		
+		<bpel:invoke name="Invoke-PatService-CreatePatientRecord" partnerLink="patientRecord"
+			portType="pat:ElectronicPatientRecord" operation="CreatePatientRecord" inputVariable="patient"
+			outputVariable="createPatientResponse"></bpel:invoke>
+			
+		<bpel:assign validate="no" name="Assign-RadiologyOrder">
+			<bpel:copy>
+				<bpel:from>
+					<bpel:literal>
+						<rad:RadiologyOrder>
+							<PatientID>12345</PatientID>
+							<CaseID>101</CaseID>
+							<ExaminationType>CT</ExaminationType>
+						</rad:RadiologyOrder>
+					</bpel:literal>
+				</bpel:from>
+				<bpel:to>$radiologyOrder.Order</bpel:to>
+			</bpel:copy>
+		</bpel:assign>	
+		
+		<bpel:invoke name="Invoke-RadService-RadiologyOrder" partnerLink="radiologyDept"
+			portType="rad:Radiology" operation="OrderRadiologyExamination" inputVariable="radiologyOrder"
+			outputVariable="radiologyOrderResponse"></bpel:invoke>
+		
+		<bpel:assign validate="no" name="RadAppointment"> 
+			<bpel:copy>
+				<bpel:from>
+					<bpel:literal>
+						<rad:Appointment>
+							<OrderID>101</OrderID>
+							<Date>2011-11-11</Date>
+						</rad:Appointment>
+					</bpel:literal>
+				</bpel:from>
+				<bpel:to>$appointment.RadiologyAppointmentRequest</bpel:to>
+			</bpel:copy>
+			
+			<bpel:copy>
+				<bpel:from>$radiologyOrderResponse.RadiologyOrderID</bpel:from>
+				<bpel:to>$appointment.RadiologyAppointmentRequest/OrderID</bpel:to>
+			</bpel:copy>
+			
+			<!-- <bpel:copy>
+				<bpel:from><bpel:literal><rad:Appointment><Date>2014-04-24</Date></rad:Appointment></bpel:literal></bpel:from>
+				<bpel:to>$appointment.RadiologyAppointmentRequest/Date</bpel:to>
+			</bpel:copy> -->
+		</bpel:assign>
+		
+		<bpel:invoke name="Invoke-RadService-RequestAppointment" partnerLink="radiologyDept"
+			portType="rad:Radiology" operation="RequestAppointment" inputVariable="appointment"
+			outputVariable="appointmentResponse"></bpel:invoke>
+			
+		<bpel:assign validate="no" name="Assign-Response">
+			<bpel:copy>
+				<bpel:from>$radiologyOrderResponse.RadiologyOrderID</bpel:from>
+				<bpel:to>$response.TestResponse</bpel:to>
+			</bpel:copy>
+		</bpel:assign>
+
+		<!-- receive werkt nog niet :(
+		<bpel:receive name="Receive-RadReportCallback" partnerLink="radiologyDept"
+			portType="rcb:RadiologyCallback" operation="SendRadiologyReport" variable="callBackReq"></bpel:receive>
+		 -->
+		 
+		<bpel:reply name="Reply-Response" partnerLink="ward"
+			portType="tns:WardServicePT" operation="AdmissionOrder" variable="response"></bpel:reply>
+	</bpel:sequence>  
