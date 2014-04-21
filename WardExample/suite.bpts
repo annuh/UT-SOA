@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tes:testSuite xmlns:ns1="http://www.PAHospital.org/PatService/" xmlns:PAH="http://www.PAHospital.org/schema" xmlns:tes="http://www.bpelunit.org/schema/testSuite" xmlns:war="http://www.PAHospital.org/WardService/" xmlns:pat="http://www.PAHospital.org/PatService/">
+    <tes:name>BPELTest.bpts</tes:name>
+    <tes:baseURL>http://localhost:7777/ws</tes:baseURL>
+    <tes:deployment>
+        <tes:put name="Ward" type="fixed">
+            <tes:wsdl>bpelContent/WardService.wsdl</tes:wsdl>
+        </tes:put>
+        <tes:partner name="PatService" wsdl="bpelContent/PatService.wsdl" partnerWsdl=""/>
+    </tes:deployment>
+    <tes:testCases>
+        <tes:testCase name="FirstTest" basedOn="" abstract="false" vary="false">
+            <tes:clientTrack/>
+            <tes:partnerTrack name="PatService">
+                <tes:sendReceive service="pat:PatService" port="PatientRecordPort" operation="CreatePatientRecord">
+                    <tes:send service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:data>
+                            <pat:Patient>
+                                <PatientID>111</PatientID>
+                                <PatientName>test</PatientName>
+                                <PatientStreet>teststreet</PatientStreet>
+                                <PatientZipCode>1234</PatientZipCode>
+                                <PatientCity>testcity</PatientCity>
+                                <PatientBirthday>2014-01-01</PatientBirthday>
+                            </pat:Patient>
+                        </tes:data>
+                    </tes:send>
+                    <tes:receive service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:condition>
+                            <tes:expression>//*[local-name()='PatientID']</tes:expression>
+                            <tes:value>111</tes:value>
+                        </tes:condition>
+                    </tes:receive>
+                </tes:sendReceive>
+                <tes:sendReceive service="ns1:PatService" port="PatientRecordPort" operation="CreatePatientRecord">
+                    <tes:send service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:data>
+                            <ns1:Patient>
+                                <PatientID>111</PatientID>
+                                <PatientName>asdf</PatientName>
+                                <PatientStreet>adsf 1</PatientStreet>
+                                <PatientZipCode>1234</PatientZipCode>
+                                <PatientCity>asdf</PatientCity>
+                                <PatientBirthday>2012-12-12</PatientBirthday>
+                            </ns1:Patient>
+                        </tes:data>
+                    </tes:send>
+                    <tes:receive service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:condition>
+                            <tes:expression>//*[local-name()='PatientID']</tes:expression>
+                            <tes:value>-1</tes:value>
+                        </tes:condition>
+                    </tes:receive>
+                </tes:sendReceive>
+                <tes:sendReceive service="ns1:PatService" port="PatientRecordPort" operation="GetPatientIDsByName">
+                    <tes:send service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:data>
+                            <pat:PatientName>asdf</pat:PatientName>
+                        </tes:data>
+                    </tes:send>
+                    <tes:receive service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:condition>
+                            <tes:expression>not(//*[local-name()='IDsList'] = '123')</tes:expression>
+                            <tes:value>'true'</tes:value>
+                        </tes:condition>
+                    </tes:receive>
+                </tes:sendReceive>
+                <tes:sendReceive service="ns1:PatService" port="PatientRecordPort" operation="GetPatientIDsByName">
+                    <tes:send service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:data>
+                            <pat:PatientName>test</pat:PatientName>
+                        </tes:data>
+                    </tes:send>
+                    <tes:receive service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:condition>
+                            <tes:expression>//*[local-name()='PatientID']</tes:expression>
+                            <tes:value>111</tes:value>
+                        </tes:condition>
+                    </tes:receive>
+                </tes:sendReceive>
+                <tes:sendOnly service="pat:PatService" port="PatientRecordPort" operation="StoreRadiologyReport" fault="false">
+                    <tes:data>
+                        <pat:RadiologyReport>
+                            <PatientID>111</PatientID>
+                            <RadiologyOrderID>111</RadiologyOrderID>
+                            <DateOfExamination>2012-12-12</DateOfExamination>
+                            <ReportText>test</ReportText>
+                        </pat:RadiologyReport>
+                    </tes:data>
+                </tes:sendOnly>
+                <tes:sendReceive service="ns1:PatService" port="PatientRecordPort" operation="RetrieveRadiologyReport">
+                    <tes:send service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:data>
+                            <pat:RadiologyReportOrder>
+                                <PatientID>111</PatientID>
+                                <RadiologyOrderID>111</RadiologyOrderID>
+                            </pat:RadiologyReportOrder>
+                        </tes:data>
+                    </tes:send>
+                    <tes:receive service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:condition>
+                            <tes:expression>//*[local-name()='ReportText']</tes:expression>
+                            <tes:value>'test'</tes:value>
+                        </tes:condition>
+                    </tes:receive>
+                </tes:sendReceive>
+                <tes:sendOnly service="pat:PatService" port="PatientRecordPort" operation="StoreLabReport" fault="false">
+                    <tes:data>
+                        <pat:LabReport>
+                            <LabOrderID>111</LabOrderID>
+                            <PatientID>111</PatientID>
+                            <SampleID>111</SampleID>
+                            <LabValues>
+                                <LabParameter>test</LabParameter>
+                                <LabValue>111</LabValue>
+                            </LabValues>
+                        </pat:LabReport>
+                    </tes:data>
+                </tes:sendOnly>
+                <tes:sendReceive service="ns1:PatService" port="PatientRecordPort" operation="RetrieveLabReport">
+                    <tes:send service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:data>
+                            <pat:LabReportOrder>
+                                <PatientID>111</PatientID>
+                                <LabOrderID>111</LabOrderID>
+                            </pat:LabReportOrder>
+                        </tes:data>
+                    </tes:send>
+                    <tes:receive service="pat:PatService" port="PatientRecordPort" fault="false">
+                        <tes:condition>
+                            <tes:expression>//*[local-name()='LabOrderID']</tes:expression>
+                            <tes:value>111</tes:value>
+                        </tes:condition>
+                    </tes:receive>
+                </tes:sendReceive>
+            </tes:partnerTrack>
+        </tes:testCase>
+    </tes:testCases>
+</tes:testSuite>
